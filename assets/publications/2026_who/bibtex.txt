@@ -1,0 +1,7 @@
+@inproceedings{
+yoon2026who,
+title={Who Pays More for Safety? Measuring the Disparate Cost of Safety Alignment across Languages},
+author={Chanwoong Yoon and Jungsoo Park and Alan Ritter},
+booktitle={EMNLP},
+year={2026},
+}

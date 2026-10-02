@@ -1,0 +1,6 @@
+@article{park2026distribution,
+  title={Distribution-Aware Reward: Reinforcement Learning over Predictive Distributions for LLM Regression},
+  author={Park, Jungsoo and Chae, Hyungjoo and Mendes, Ethan and DeYoung, Jay and Kishore, Varsha and Xu, Wei and Ritter, Alan},
+  journal={arXiv preprint arXiv:2605.20740},
+  year={2026}
+}

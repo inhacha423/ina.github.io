@@ -1,7 +1,8 @@
-@article{mendes2026didactic,
-  title = {Didactic to Constructive: Turning Expert Solutions into Learnable Reasoning},
-  author = {Mendes, Ethan and Park, Jungsoo and Ritter, Alan},
-  journal = {arXiv preprint arXiv:2602.02405},
-  year = {2026},
-  url = {https://arxiv.org/abs/2602.02405}
+@inproceedings{
+mendes2026making,
+title={Making Expert Reasoning Learnable with Self-Distillation},
+author={Ethan Mendes and Jungsoo Park and Alan Ritter},
+booktitle={Forty-third International Conference on Machine Learning},
+year={2026},
+url={https://openreview.net/forum?id=JG6f02X29a}
 }

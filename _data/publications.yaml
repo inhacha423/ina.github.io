@@ -1,8 +1,35 @@
 papers:   
 
+  - title: "Distribution-Aware Reward: Reinforcement Learning over Predictive Distributions for LLM Regression"  
+    authors: "<b>Jungsoo Park</b>, Hyungjoo Chae, Ethan Mendes, Jay DeYoung, Varsha Kishore, Wei Xu,  Alan Ritter"  
+    venue: "arXiv preprint"
+    paper_pdf: "https://arxiv.org/pdf/2605.20740"
+    bibtex: "/assets/publications/2026_dar/bibtex.txt"
+    image: "/assets/publications/2023_optimizing/figure.png"
+    year: 2026
+    selected: y
+
+  - title: "Soft Token Alignment for Cross-Lingual Reasoning"  
+    authors: "Ivy He, <b>Jungsoo Park</b>, Wei Xu, Alan Ritter"  
+    venue: "NeurIPS 2026"
+    paper_pdf: "https://arxiv.org/pdf/2606.26466"
+    bibtex: "/assets/publications/2026_soft/bibtex.txt"
+    image: "/assets/publications/2023_optimizing/figure.png"
+    year: 2026
+    selected: y
+
+  - title: "Who Pays More for Safety? Measuring the Disparate Cost of Safety Alignment across Languages"  
+    authors: "Chanwoong Yoon, <b>Jungsoo Park</b>, Alan Ritter"  
+    venue: "EMNLP 2026"
+    paper_pdf: "https://arxiv.org/pdf/2608.22490"
+    bibtex: "/assets/publications/2026_who/bibtex.txt"
+    image: "/assets/publications/2023_optimizing/figure.png"
+    year: 2026
+    selected: y
+
   - title: "Safe and Scalable Web Agent Learning via Recreated Websites"  
     authors: "Hyungjoo Chae, <b>Jungsoo Park</b>, Alan Ritter"  
-    venue: "arXiv preprint"
+    venue: "ICML 2026"
     paper_pdf: "https://arxiv.org/pdf/2603.10505"
     bibtex: "/assets/publications/2026_web/bibtex.txt"
     image: "/assets/publications/2023_optimizing/figure.png"
@@ -11,7 +38,7 @@ papers:
 
   - title: "Didactic to Constructive: Turning Expert Solutions into Learnable Reasoning"  
     authors: "Ethan Mendes, <b>Jungsoo Park</b>, Alan Ritter"  
-    venue: "arXiv preprint"
+    venue: "ICML 2026"
     paper_pdf: "https://arxiv.org/pdf/2602.02405"
     bibtex: "/assets/publications/2026_didactic/bibtex.txt"
     image: "/assets/publications/2023_optimizing/figure.png"
@@ -29,7 +56,7 @@ papers:
 
   - title: "Can LLMs Help Uncover Insights about LLMs? A Large-Scale, Evolving Literature Analysis of Frontier LLMs"  
     authors: "<b>Jungsoo Park</b>, Junmo Kang, Gabriel Stanovsky, Alan Ritter"  
-    venue: "Association for Computational Linguistics"
+    venue: "ACL 2025"
     paper_pdf: "https://arxiv.org/pdf/2502.18791v2"
     bibtex: "/assets/publications/2025_can/bibtex.txt"
     image: "/assets/publications/2023_optimizing/figure.png"
@@ -38,7 +65,7 @@ papers:
 
   - title: "Optimizing Test-Time Query Representations for Dense Retrieval"  
     authors: "Mujeen Sung, <b>Jungsoo Park</b>, Jaewoo Kang, Danqi Chen, Jinhyuk Lee"  
-    venue: "Empirical Methods in Natural Language Processing-Findings"
+    venue: "EMNLP-Findings 2023"
     paper_pdf: "https://aclanthology.org/2023.findings-acl.354.pdf"
     bibtex: "/assets/publications/2023_optimizing/bibtex.txt"
     image: "/assets/publications/2023_optimizing/figure.png"
@@ -56,7 +83,7 @@ papers:
   
   - title: "FaVIQ: FAct Verification from Information-seeking Questions"  
     authors: "<b>Jungsoo Park*</b>, Sewon Min*, Jaewoo Kang, Luke Zettlemoyer, Hannaneh Hajishirzi"  
-    venue: "Association for Computational Linguistics"  
+    venue: "ACL 2022"  
     paper_pdf: "https://aclanthology.org/2022.acl-long.354.pdf"
     bibtex: "/assets/publications/2022_faviq/bibtex.txt"
     image: "/assets/publications/2022_faviq/faviq.png"
@@ -65,7 +92,7 @@ papers:
 
   - title: "Consistency Training with Virtual Adversarial Discrete Perturbation"  
     authors: "<b>Jungsoo Park*</b>, Gyuwan Kim*, Jaewoo Kang"  
-    venue: "North American Chapter of the ACL" 
+    venue: "NAACL 2022" 
     paper_pdf: "https://aclanthology.org/2022.naacl-main.414.pdf" 
     bibtex: "/assets/publications/2022_consistency/bibtex.txt"
     image: "/assets/publications/2022_consistency/consistency.png"
@@ -74,7 +101,7 @@ papers:
 
   - title: "Learn to Resolve Conversational Dependency: A Consistency Training Framework for Conversational Question Answering"  
     authors: "Gangwoo Kim, Hyunjae Kim, <b>Jungsoo Park</b>, Jaewoo Kang"  
-    venue: "Association for Computational Linguistics"
+    venue: "ACL 2021"
     paper_pdf: "https://aclanthology.org/2021.acl-long.478.pdf"
     bibtex: "/assets/publications/2021_learn_to_resolve/bibtex.txt"
     image: "/assets/publications/2021_learn_to_resolve/excord.png"
@@ -83,7 +110,7 @@ papers:
   
   - title: "Adversarial Subword Regularization for Robust Neural Machine Translation"  
     authors: "<b>Jungsoo Park</b>, Mujeen Sung, Jinhyuk Lee, Jaewoo Kang"  
-    venue: "Empirical Methods in Natural Language Processing-Findings"  
+    venue: "EMNLP Findings 2020"  
     paper_pdf: "https://aclanthology.org/2020.findings-emnlp.175.pdf"
     bibtex: "/assets/publications/2020_advsr/bibtex.txt"
     image: "/assets/publications/2020_advsr/advsr.png"
