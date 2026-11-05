@@ -25,7 +25,7 @@
   margin-top: .5rem;
   font: 500 var(--type-meta)/1.5 var(--font-display);
 }
-.bio-links a { color: #643a85; text-decoration: none; }
+.bio-links a { color: var(--color-accent); text-decoration: none; }
 .bio-links a:hover, .bio-links a:focus-visible { text-decoration: underline; }
 
 .bio {
@@ -44,8 +44,6 @@
 }
 
 #publications {
-  --publication-hover: #d7bed8;
-  --publication-ink: #423447;
   padding-top: 10px;
   margin: 0;
 }
@@ -60,18 +58,18 @@
   flex-wrap: wrap;
   gap: 4px 14px;
   padding-bottom: .55rem;
-  border-bottom: 1px solid rgba(92,75,97,.24);
+  border-bottom: 1px solid var(--color-rule);
 }
 
 .contribution {
   margin: 0;
-  font-size: 0.75rem;
+  font-size: var(--type-caption);
   line-height: 1.5;
-  color: #6c666c;
+  color: var(--color-text-muted);
 }
 
 .publication-note {
-  color: #6c666c;
+  color: var(--color-text-muted);
   font-size: var(--type-meta);
 }
 
@@ -103,7 +101,7 @@
 
 .paper-venue {
   margin: .35rem 0 0;
-  color: #57515b;
+  color: var(--color-text-secondary);
   font-size: var(--type-meta);
   line-height: 1.45;
 }
@@ -125,13 +123,13 @@
 .paper-action--pending {
   display: inline-block;
   text-decoration: none;
-  color: #5c4b61;
-  border: 1px solid rgba(92,75,97,.38);
+  color: var(--color-button-text);
+  border: 1px solid var(--color-button-border);
   border-radius: 2px;
   min-width: 4.5rem;
   padding: .25rem .55rem;
   font-family: var(--font-display);
-  font-size: .75rem;
+  font-size: var(--type-caption);
   font-weight: 500;
   line-height: 1.35;
   text-align: center;
@@ -141,20 +139,20 @@
 
 .paper-actions a:hover,
 .paper-actions a:focus-visible {
-  color: var(--publication-ink);
-  background: var(--publication-hover);
-  border-color: #a88ca9;
+  color: var(--color-button-ink);
+  background: var(--color-button-hover);
+  border-color: var(--color-button-hover-border);
   outline-offset: 2px;
 }
 
 #publications h1,
 .home-news h2 {
   margin: 0 0 14px;
-  color: #53605e;
+  color: var(--color-home-heading);
   font-size: var(--type-meta);
   font-weight: 600;
-  line-height: 1.42;
-  letter-spacing: .08em;
+  line-height: 1.4;
+  letter-spacing: .065em;
   text-transform: uppercase;
 }
 
@@ -182,7 +180,7 @@
 
 .home-news h2 {
   padding-bottom: .55rem;
-  border-bottom: 1px solid rgba(92,75,97,.24);
+  border-bottom: 1px solid var(--color-rule);
   margin-bottom: 10px;
 }
 
@@ -214,7 +212,7 @@
 }
 
 .news-feed:focus-visible {
-  outline: 2px solid #643a85;
+  outline: 2px solid var(--color-accent);
   outline-offset: 3px;
 }
 

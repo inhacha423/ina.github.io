@@ -5,7 +5,7 @@
 .project-body {
   font-family: var(--font-body);
   font-size: var(--type-body);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.6;
   letter-spacing: -.01em;
   max-width: 68ch;

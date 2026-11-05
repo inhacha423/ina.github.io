@@ -1,0 +1,109 @@
+---
+layout: homepage
+nav_item: design-system
+title: Design System · Inha Cha
+stylesheets: [home, projects, cv]
+colors:
+  - {name: Warm Paper, token: color-paper, value: '#F4E8E1', use: 공통 배경}
+  - {name: Faded Lilac, token: color-lilac, value: '#E8D7E4', use: 그라데이션 왼쪽}
+  - {name: Dusty Rose, token: color-rose, value: '#E6D5D4', use: 그라데이션 중간}
+  - {name: Muted Coral, token: color-coral, value: '#DDA7A4', use: 그라데이션 오른쪽}
+  - {name: Ink, token: color-text, value: '#29272A', use: 제목과 본문}
+  - {name: Secondary, token: color-text-secondary, value: '#57515B', use: 직책과 학회}
+  - {name: Muted, token: color-text-muted, value: '#6C666C', use: 날짜와 안내 문구}
+  - {name: Accent, token: color-accent, value: '#643A85', use: 링크와 포커스 테두리}
+  - {name: Selection, token: highlight, value: '#D8BAFF', use: 드래그와 텍스트 링크 호버}
+  - {name: Selection Ink, token: highlight-ink, value: '#311947', use: 선택된 텍스트}
+  - {name: Button Hover, token: color-button-hover, value: '#D7BED8', use: 버튼 호버 배경}
+  - {name: Button Ink, token: color-button-ink, value: '#423447', use: 버튼 호버 글자}
+---
+<article class="ds-page">
+  <header class="ds-header">
+    <p class="ds-eyebrow">Inha Cha · Design system</p>
+    <h1>Warm, clear, editorial.</h1>
+    <p>현재 포트폴리오의 폰트와 색상을 바탕으로 만든 디자인 기준. 차분한 종이색 배경 위에 글자 크기, 웨이트, 정렬로 위계를 만든다.</p>
+    <div class="ds-index"><a href="#ds-color">Color</a><a href="#ds-type">Typography</a><a href="#ds-components">Components</a><a href="#ds-layout">Layout</a></div>
+  </header>
+
+  <section class="ds-section" id="ds-color">
+    <h2>01 · Color</h2>
+    <p>모든 페이지는 Dusty Rose + Warm Paper를 공유한다. 상단의 컬러와 그레인은 아래로 갈수록 종이색에 자연스럽게 섞인다.</p>
+    <div class="ds-swatches">
+      {% for color in page.colors %}
+      <div class="ds-swatch">
+        <div class="ds-color" style="background: var(--{{ color.token }})"></div>
+        <strong>{{ color.name }}</strong><code>{{ color.value }}</code>
+        <small>{{ color.use }}</small><code>--{{ color.token }}</code>
+      </div>
+      {% endfor %}
+    </div>
+    <p class="ds-note">얇은 구분선은 버튼 글자색의 24% 불투명도, 버튼 테두리는 38%를 사용한다. 이전 코랄·라일락 배경은 saved-palettes.css에 보관한다.</p>
+  </section>
+
+  <section class="ds-section" id="ds-type">
+    <h2>02 · Typography</h2>
+    <div class="ds-fonts">
+      <div><p class="ds-font-display">Instrument Sans<br>Aa Bb Cc 0123</p><p>페이지·섹션·논문 제목, 내비게이션, 버튼에 사용한다. 논문 제목 400, 페이지 제목과 UI 500, 섹션 제목 600.</p></div>
+      <div><p class="ds-font-body">Inter<br>Aa Bb Cc 0123</p><p>Biography, 프로젝트 본문, CV 내용, 저자, 날짜에 사용한다. 본문 400, 기관명 500, 본인 저자명 600.</p></div>
+    </div>
+    <div class="ds-table-wrap">
+      <table class="ds-table">
+        <thead><tr><th>역할</th><th>폰트</th><th>크기</th><th>웨이트 / 행간</th></tr></thead>
+        <tbody>
+          <tr><td>프로젝트 페이지 제목</td><td>Instrument Sans</td><td>32–56px</td><td>500 / 1.1</td></tr>
+          <tr><td>CV 이름</td><td>Instrument Sans</td><td>32px</td><td>500 / 1.15</td></tr>
+          <tr><td>논문 제목</td><td>Instrument Sans</td><td>18px</td><td>400 / 1.4</td></tr>
+          <tr><td>Biography / 프로젝트 본문</td><td>Inter</td><td>17px</td><td>400 / 1.6</td></tr>
+          <tr><td>CV 기관명·주요 항목</td><td>Inter</td><td>16px</td><td>500 / 1.5</td></tr>
+          <tr><td>저자 / CV 직책</td><td>Inter</td><td>15px</td><td>400 / 1.5</td></tr>
+          <tr><td>Home·CV 섹션 제목</td><td>Instrument Sans</td><td>14px</td><td>600 / 1.4 · 자간 .065em</td></tr>
+          <tr><td>날짜 / News / 학회 / 안내 문구</td><td>Inter</td><td>14px</td><td>400 / 1.45–1.7</td></tr>
+          <tr><td>내비게이션 / Role</td><td>Instrument Sans</td><td>13px</td><td>500 / Role 400</td></tr>
+          <tr><td>버튼 / 기여도 설명</td><td>Instrument Sans / Inter</td><td>12px</td><td>500 / 설명 400</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="ds-note">본문은 최대 68ch. 제목의 기본 자간은 −.025em, 긴 본문은 −.01em. 본문을 과도하게 굵게 만들지 않고 크기와 간격으로 구분한다.</p>
+  </section>
+
+  <section class="ds-section" id="ds-components">
+    <h2>03 · Components & states</h2>
+    <h3 class="ds-label">Publication</h3>
+    {% assign paper = site.data.publications.papers[2] %}
+    {% assign pdf = paper.links | where: 'label', 'pdf' | first %}
+    <div id="publications" class="ds-demo">
+      <div class="papers">
+        <article>
+          <h3><a href="{{ pdf.url | escape }}" target="_blank" rel="noopener">{{ paper.title | escape }}</a></h3>
+          <p class="paper-authors">{{ paper.authors }}</p>
+          <p class="paper-venue"><a href="{{ paper.venue_url | escape }}" target="_blank" rel="noopener">{{ paper.venue_short }}</a></p>
+          <div class="paper-actions"><a href="{{ pdf.url | escape }}" target="_blank" rel="noopener">PDF</a><span class="paper-action--pending" aria-disabled="true" title="BibTeX coming soon">BibTeX</span></div>
+        </article>
+      </div>
+    </div>
+    <p class="ds-note">제목과 학회 링크는 밑줄 없이 표시한다. 호버하면 드래그 선택처럼 글자 뒤에 색이 들어간다. 버튼은 얇은 테두리, 2px 모서리, 차분한 라일락 호버를 사용한다. BibTeX가 없으면 불투명도 55%의 비활성 상태로 표시한다.</p>
+    <h3 class="ds-label">CV dated entry</h3>
+    <div class="cv-page ds-demo">
+      <section class="cv-section">
+        <h2>Employment</h2>
+        <div class="cv-entry"><span class="cv-date">{% include cv-date.html date='Aug 2026 – Dec 2026' %}</span><div><strong>Toyota Research Institute</strong><p class="cv-detail">Research Intern, Human-centric AI, Harmonious Communities</p></div></div>
+      </section>
+    </div>
+    <p class="ds-note">날짜는 오른쪽, 내용은 왼쪽 정렬. 섹션 제목은 본문 열 위에 맞춘다. Research Interests는 제목과 본문 모두 페이지 왼쪽부터 시작한다.</p>
+    <p><a href="#ds-type">이 링크에 마우스를 올리거나 Tab 키로 포커스해 보기</a></p>
+  </section>
+
+  <section class="ds-section" id="ds-layout">
+    <h2>04 · Layout & spacing</h2>
+    <dl class="ds-specs">
+      <div><dt>페이지 프레임</dt><dd>최대 1160px · 좌우 여백 clamp(24px, 7vw, 84px)</dd></div>
+      <div><dt>콘텐츠 너비</dt><dd>CV 860px · 프로젝트 목록 820px · 프로젝트 상세 800px</dd></div>
+      <div><dt>프로젝트 그리드</dt><dd>2열 · 열 사이 16px · 행 사이 12px · 620px 이하에서 1열</dd></div>
+      <div><dt>프로젝트 블록</dt><dd>블록 사이 32px · 나란한 이미지 사이 6px</dd></div>
+      <div><dt>CV 그리드</dt><dd>날짜 열 136px + 간격 24px · 600px 이하에서는 104px + 16px</dd></div>
+      <div><dt>구분선</dt><dd>Home 섹션 제목 아래 1px · 논문 사이에는 선 없이 28px 간격</dd></div>
+      <div><dt>기본 간격</dt><dd>4 / 8 / 12 / 16 / 24 / 32 / 44px를 기준으로 조합</dd></div>
+    </dl>
+    <p class="ds-note">실제 값의 기준은 assets/css/site.css의 토큰과 페이지별 CSS. 새 요소를 만들 때는 기존 크기·컬러·컴포넌트를 먼저 재사용한다.</p>
+  </section>
+</article>

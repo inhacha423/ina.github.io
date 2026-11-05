@@ -1,4 +1,20 @@
 :root {
+  --color-text: #29272A;
+  --color-text-secondary: #57515b;
+  --color-text-muted: #6c666c;
+  --color-accent: #643a85;
+  --color-home-heading: #53605e;
+  --color-cv-heading: #4e4852;
+  --color-paper: #f4e8e1;
+  --color-lilac: #e8d7e4;
+  --color-rose: #e6d5d4;
+  --color-coral: #dda7a4;
+  --color-button-text: #5c4b61;
+  --color-button-hover: #d7bed8;
+  --color-button-ink: #423447;
+  --color-button-hover-border: #a88ca9;
+  --color-rule: rgba(92,75,97,.24);
+  --color-button-border: rgba(92,75,97,.38);
   --highlight: #d8baff;
   --highlight-ink: #311947;
   --font-body: Inter, sans-serif;
@@ -10,15 +26,16 @@
   --type-secondary: .9375rem;
   --type-meta: .875rem;
   --type-small: .8125rem;
+  --type-caption: .75rem;
   color-scheme: only light;
-  background-color: #f4e8e1;
+  background-color: var(--color-paper);
   background-repeat: no-repeat, repeat, no-repeat, no-repeat;
   background-size: 100% 100%, 160px 160px, 100% 560px, 100% 100%;
   background-image:
-    linear-gradient(to bottom, transparent 84px, #f4e8e1 560px),
+    linear-gradient(to bottom, transparent 84px, var(--color-paper) 560px),
     url("../images/grain.svg"),
-    linear-gradient(110deg, #e8d7e4 0%, #e6d5d4 34%, #f4e8e1 65%, #dda7a4 100%),
-    linear-gradient(#f4e8e1, #f4e8e1);
+    linear-gradient(110deg, var(--color-lilac) 0%, var(--color-rose) 34%, var(--color-paper) 65%, var(--color-coral) 100%),
+    linear-gradient(var(--color-paper), var(--color-paper));
 }
 
 ::selection {
@@ -58,7 +75,7 @@ a:not(.mast):focus-visible {
 }
 
 body {
-  color: #29272A;
+  color: var(--color-text);
   font-family: var(--font-body);
   font-size: var(--type-body);
   line-height: 1.55;
@@ -97,12 +114,12 @@ nav a.mast {
 
 nav a[aria-current="page"] {
   text-decoration: underline;
-  text-decoration-color: #643a85;
+  text-decoration-color: var(--color-accent);
   text-underline-offset: 6px;
 }
 
 a:focus-visible {
-  outline: 2px solid #643a85;
+  outline: 2px solid var(--color-accent);
   outline-offset: 3px;
 }
 
@@ -126,6 +143,7 @@ nav .mast img {
 }
 
 h1, h2, h3 {
+  font-family: var(--font-display);
   font-weight: 500;
   letter-spacing: -.025em;
 }

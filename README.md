@@ -2,6 +2,8 @@
 
 This Jekyll site contains Home, Projects, and CV pages.
 
+Design system: see [DESIGN_SYSTEM.md](DESIGN_SYSTEM.md) for fonts, color tokens, layout rules, and editing locations. Open `/design-system.html` in the local preview to inspect colors, typography, and live components.
+
 All pages use the Dusty Rose + Warm Paper background in `assets/css/site.css`. The previous Muted Coral + Aged Paper and Faded Lilac + Blush backgrounds are preserved in `assets/css/saved-palettes.css`. That file is not loaded by the site; load it after the page stylesheet to restore those page-specific backgrounds.
 
 | To edit | File |
@@ -14,6 +16,7 @@ All pages use the Dusty Rose + Warm Paper background in `assets/css/site.css`. T
 | Home, Projects, and CV styles | `assets/css/home.css`, `assets/css/projects.css`, `assets/css/cv.css` |
 | Logo, portrait, and PDF download paths | `_data/files.yml` |
 | CV section order and entries | `_data/cv.yml` (publications come from `_data/publications.yaml`) |
+
 
 ## Updating uploaded files
 

@@ -44,7 +44,7 @@ title: CV
         <span class="cv-date">{% if paper.year != previous_year %}{{ paper.year }}{% endif %}</span>
         {% assign previous_year = paper.year %}
         <div>
-          <strong>{{ paper.title | escape }}</strong>
+          <h3 class="cv-paper-title">{{ paper.title | escape }}</h3>
           {% if paper.authors %}<p>{{ paper.authors }}</p>{% endif %}
           {% if paper.year != "In Review" %}<small>{{ paper.venue }}</small>{% endif %}
         </div>
