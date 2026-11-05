@@ -11,7 +11,12 @@ layout: homepage
   {% endif %}
   {% if page.role != empty %}<p class="project-role">Role <span>{{ page.role | escape }}</span></p>{% endif %}
   <div class="project-content">
-    {% for block in page.blocks %}
+    {% if page.blocks %}
+      {% assign project_blocks = page.blocks %}
+    {% else %}
+      {% assign project_blocks = site.data.project_template.blocks %}
+    {% endif %}
+    {% for block in project_blocks %}
       {% include project-block.html block=block %}
     {% endfor %}
   </div>

@@ -1,15 +1,17 @@
 # Inha Cha’s research portfolio
 
-This Jekyll site contains Home and Projects pages.
+This Jekyll site contains Home, Projects, and CV pages.
 
 | To edit | File |
 | --- | --- |
 | Biography and Home sections | `index.html` |
-| News and publications | `_data/news.yml`, `_data/publications.yaml` |
+| News, publications, and contact links | `_data/news.yml`, `_data/publications.yaml`, `_data/contact.yml` |
 | Projects | `_data/projects.yaml` (gallery titles, links, and thumbnail paths) |
 | Shared navigation | `_layouts/homepage.html` |
-| Typography, spacing, and responsive layout | `assets/css/site.css` |
-| Logo, portrait, and CV paths | `_data/files.yml` |
+| Shared fonts, colors, and navigation | `assets/css/site.css` |
+| Home, Projects, and CV styles | `assets/css/home.css`, `assets/css/projects.css`, `assets/css/cv.css` |
+| Logo, portrait, and PDF download paths | `_data/files.yml` |
+| CV section order and entries | `_data/cv.yml` (publications come from `_data/publications.yaml`) |
 
 ## Updating uploaded files
 
@@ -19,11 +21,15 @@ Use a repository path starting with `/assets/`. The templates apply Jekyll’s `
 
 ## Local preview
 
-With Jekyll installed, run `jekyll serve` from the repository root.
+With Jekyll installed, run `jekyll serve` from the repository root. The shared layout loads `site.css` and the stylesheet that matches each page's `nav_item`.
+
+## CV entries
+
+Edit entries and the order of the dated sections in `_data/cv.yml`. The `section_order` list controls their headings and order. Publications are shared with Home through `_data/publications.yaml`, and Academic Services appears below them in `cv/index.html`.
 
 ## Project pages
 
-Each file in `projects/` contains only a title, role, hero image path, and ordered `blocks`. Project images belong in `assets/projectimages/<project-name>/`. The shared layout is `_layouts/project-detail.html`, block markup is `_includes/project-block.html`, and styling is in `assets/css/site.css`.
+Each file in `projects/` starts with a title, role, and hero image path. Until you add project-specific `blocks`, it displays the examples in `_data/project_template.yml`. To replace the examples, add a `blocks` list to that project's file. Project images belong in `assets/projectimages/<project-name>/`. The shared layout is `_layouts/project-detail.html`, block markup is `_includes/project-block.html`, and styling is in `assets/css/projects.css`.
 
 Add blocks to a project page like this:
 
@@ -61,5 +67,7 @@ blocks:
 Copy, remove, or reorder blocks as needed. Use `hero` for the full-width image below the title. An empty `hero` displays a placeholder until an image is added.
 
 ## Credits
+
+The HTML CV layout adapts the dated-entry structure from [Donghoon Shin’s CV theme](https://github.com/donghoon-io/donghoon-io.github.io).
 
 Forked from [Jungsoo Park’s website](https://github.com/JJumSSu/JJumSSu.github.io), based on Martin Saveski’s template. The news layout was inspired by [Donghoon Shin’s website theme](https://github.com/donghoon-io/donghoon-io.github.io).

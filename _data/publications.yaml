@@ -4,36 +4,41 @@ papers:
     GenAI into Legacy Products'
   venue: In Review
   links: []
+  year: In Review
 - title: 'A Systematic Review of AI-at-Work Research in HCI: What We Study, How We
     Study It, and What Should Come Next'
   venue: In Review
   links: []
+  year: In Review
 - title: 'Navigating Organizational Infrastructures: Addressing Ethics Uncertainty
     Experienced by Middle Managers in AI Development'
-  authors: <b> Ajit Pillai*, <span class="thisauthor">Inha Cha</span></b>*, and Richmond
+  authors: Ajit Pillai*, <b><span class="thisauthor">Inha Cha</span></b>*, and Richmond
     Y. Wong
   venue: ACM Conference on Fairness, Accountability, and Transparency 2026 <a class="tag"
     target="_blank" href="https://facctconference.org/2026/index.html">(FAccT 2026)</a>
   links:
   - url: https://dl.acm.org/doi/10.1145/3805689.3812407
     label: pdf
+  year: '2026'
 - title: 'The Values of Value in AI Adoption: Rethinking Efficiency in UX Designers''
     Workplaces'
   authors: <b><span class="thisauthor">Inha Cha</span></b>, Catherine Wieczorek, and
     Richmond Y. Wong
-  venue: ACM Conference on Human Factors in Computing System 2026 <a class="tag"
-    target="_blank" href="https://chi2026.acm.org/">(CHI 2026)</a>
+  venue: ACM Conference on Human Factors in Computing System 2026 <a class="tag" target="_blank"
+    href="https://chi2026.acm.org/">(CHI 2026)</a>
   links:
   - url: https://dl.acm.org/doi/10.1145/3772318.3790429
     label: pdf
+  year: '2026'
 - title: 'Beyond Claiming Sovereign AI: Motivations, Challenges, and Contradictions
     in Developing and Deploying Local Foundation Models in South Korea'
   authors: <b><span class="thisauthor">Inha Cha</span></b> and Richmond Y. Wong
-  venue: ACM Conference on Human Factors in Computing System 2026 <a class="tag"
-    target="_blank" href="https://chi2026.acm.org/">(CHI 2026)</a>
+  venue: ACM Conference on Human Factors in Computing System 2026 <a class="tag" target="_blank"
+    href="https://chi2026.acm.org/">(CHI 2026)</a>
   links:
   - url: https://dl.acm.org/doi/10.1145/3772318.3790666
     label: pdf
+  year: '2026'
 - title: "“My Body is Not Your Porn”: Identifying Trends of Harm and Oppression through
     a Sociotechnical Genealogy of Digital Sexual Violence in South Korea"
   authors: <b><span class="thisauthor">Inha Cha</span></b>*, Yeonju Jang*, Haesoo
@@ -44,6 +49,7 @@ papers:
   links:
   - url: https://dl.acm.org/doi/full/10.1145/3788066
     label: pdf
+  year: '2026'
 - title: 'Culture is Everywhere: A Call for Intentionally Cultural Evaluation'
   authors: Juhyun Oh, <b><span class="thisauthor">Inha Cha</span></b>, Michael Saxon,
     Hyunseung Lim, Shaily Bhatt, Alice Oh
@@ -52,6 +58,7 @@ papers:
   links:
   - url: https://aclanthology.org/2025.findings-emnlp.1043/
     label: pdf
+  year: '2025'
 - title: Discovering Factor Level Preferences to Improve Human-Model Alignment
   authors: Juhyun Oh, Eunsu Kim, Jiseon Kim, Wenda Xu, <b><span class="thisauthor">Inha
     Cha</span></b>, William Yang Wang, Alice Oh
@@ -60,12 +67,14 @@ papers:
   links:
   - url: https://aclanthology.org/2025.findings-emnlp.1045/
     label: pdf
+  year: '2025'
 - title: Understanding Socio-technical Factors Configuring AI Non-Use in UX Work Practices
   authors: <b><span class="thisauthor">Inha Cha</span></b> and Richmond Wong
   venue: ACM Conference on Human Factors in Computing System 2025 (CHI 2025)
   links:
   - url: https://doi.org/10.1145/3706598.3713140
     label: pdf
+  year: '2025'
 - title: 'Ethics Pathways: A Design Activity for Reflecting on Ethical Engagement
     in HCI Research'
   authors: <b><span class="thisauthor">Inha Cha</span></b>*, Ajit Pillai*, Richmond
@@ -77,6 +86,7 @@ papers:
     label: pdf
   - url: https://drive.google.com/file/d/1lXCQFDEBIgkR3piV8BvGiyAOH7TtlcZM/view?usp=sharing
     label: resource
+  year: '2024'
 - title: 'Investigating the Potential of Group Recommendation Systems As a Medium
     of Social Interactions: A Case of Experiences Between Two Users'
   authors: |-
@@ -88,6 +98,7 @@ papers:
   links:
   - url: https://dl.acm.org/doi/10.1145/3613904.3642544f
     label: pdf
+  year: '2024'
 - title: Unlocking the Tacit Knowledge of Data Work in Machine Learning
   authors: <b><span class="thisauthor">Inha Cha</span></b>*, Juhyun Oh*, Cheul Young
     Park*, Jiyoon Han, Hwalsuk Lee
@@ -97,6 +108,7 @@ papers:
   links:
   - url: https://dl.acm.org/doi/10.1145/3544549.3585616
     label: pdf
+  year: '2023'
 - title: Exploring the Use of a Voice-based Conversational Agent to Empower Adolescents
     with Autism Spectrum Disorder
   authors: <b><span class="thisauthor">Inha Cha</span></b>, Sung-In Kim, Hwajung Hong,
@@ -107,6 +119,7 @@ papers:
   links:
   - url: https://dl.acm.org/doi/10.1145/3411764.3445116
     label: pdf
+  year: '2021'
 - title: 'Toward Becoming a Better Self: Understanding Self-Tracking Experiences of
     Adolescents with Autism Spectrum Disorder Using Custom Trackers'
   authors: "Sung-In Kim, Eunkyung Jo, Myeonghan Ryu, \n              <b><span class=\"thisauthor\">Inha
@@ -117,6 +130,7 @@ papers:
   links:
   - url: https://dl.acm.org/doi/10.1145/3329189.3329209
     label: pdf
+  year: '2019'
 - title: A Study for Specializing a Chatbot-based Self-Management Program for Adolescents
     with Autism Spectrum Disorder
   authors: "Sung-In Kim, Myeonghan Ryu, Eunkyung Jo, \n              <b><span class=\"thisauthor\">Inha
@@ -126,3 +140,4 @@ papers:
   links:
   - url: https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE08008121
     label: pdf
+  year: '2019'

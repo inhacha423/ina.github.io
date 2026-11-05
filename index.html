@@ -7,6 +7,12 @@ nav_item: home
   <div class="bio">
     <p>Inha Cha is a PhD Student at Georgia Tech working with <a href="https://richmondywong.com/">Dr. Richmond Y. Wong</a> and <a href="https://carldisalvo.com/">Dr. Carl DiSalvo</a>. Her research sits at the intersection of Human-Computer Interaction (HCI), Science and Technology Studies (STS), and technology policy. She explores how AI is (re)shaping everyday work and how workers can actively shape these transformations. She is particularly interested in how workers can build alternative forms of labor relations in the AI era, and how workers, labor movements, and broader social movements can challenge existing power structures and shape alternative futures.</p>
     <p>Before joining Georgia Tech, she worked as an AI product UX designer at Upstage. She completed her master’s degree in the Department of Industrial Design at KAIST, advised by Dr. Youn-kyung Lim, and earned her undergraduate degree in Aesthetics and Information Science and Culture at Seoul National University.</p>
+
+    <div class="bio-links" aria-label="Contact and profiles">
+      <a href="mailto:{{ site.data.contact.email | escape }}">Email ↗</a>
+      <a href="{{ site.data.contact.google_scholar | escape }}" target="_blank" rel="noopener">Google Scholar ↗</a>
+      <a href="{{ site.data.contact.linkedin | escape }}" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
   </div>
 </section>
 <section class="home-news" aria-labelledby="news-heading">
@@ -39,7 +45,8 @@ nav_item: home
   <div class="papers">
     {% for paper in site.data.publications.papers %}
     <article>
-      <h3>{{ paper.title }}</h3>
+      {% assign pdf_link = paper.links | where: "label", "pdf" | first %}
+      <h3>{% if pdf_link %}<a href="{{ pdf_link.url | escape }}" target="_blank" rel="noopener">{{ paper.title | escape }}</a>{% else %}{{ paper.title | escape }}{% endif %}</h3>
       {% if paper.authors %}<div>{{ paper.authors }}</div>{% endif %}
       <div class="links">
         <em>{{ paper.venue }}</em>

@@ -1,0 +1,80 @@
+/* Project reading typography */
+.projects-page h1, .projects-page h2 {
+  font-family: var(--font-display);
+}
+.project-body {
+  font-family: var(--font-body);
+  font-size: var(--type-body);
+  font-weight: 300;
+  line-height: 1.6;
+  letter-spacing: -.01em;
+  max-width: 68ch;
+}
+.project-body p { margin-bottom: 1.4em; }
+/* Projects gallery */
+.projects-page { padding-top: 30px; }
+.project-grid {
+  width: min(100%, 820px);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem 1rem;
+}
+.project-card { margin: 0; min-width: 0; }
+.project-card-link { display: block; text-decoration: none; }
+.project-thumbnail {
+  width: 100%;
+  aspect-ratio: 1.6;
+  background: #d9d9d9;
+  overflow: hidden;
+}
+.project-thumbnail img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.project-card h1 {
+  margin: 0.875rem 0 0;
+  font-family: var(--font-display);
+  font-size: var(--type-meta);
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0;
+  text-align: center;
+}
+@media (max-width: 620px) {
+  .project-grid { grid-template-columns: 1fr; row-gap: 0.75rem; }
+}
+
+.project-detail { width: min(100%, 800px); margin: 2rem auto 0; }
+.project-back { font: 500 var(--type-small) var(--font-display); text-transform: uppercase; }
+.project-detail h1 { font: 500 clamp(var(--type-page), 5vw, 3.5rem)/1.1 var(--font-display); margin: 2rem 0; }
+
+.project-hero { display: block; width: 100%; height: auto; aspect-ratio: 1.6; object-fit: cover; }
+.project-placeholder { background: #d9d9d9; }
+.project-role { margin: 1rem 0 3rem; font: 400 var(--type-small)/1.5 var(--font-display); letter-spacing: .02em; text-transform: uppercase; }
+.project-role span { margin-left: .75rem; text-transform: none; }
+.project-content { display: grid; gap: 2rem; }
+.project-block h2 { font: 500 clamp(1.5rem, 3vw, 2rem)/1.2 var(--font-display); margin: 0 0 1rem; }
+.project-block img { display: block; width: 100%; height: auto; }
+.project-image-placeholder { width: 100%; aspect-ratio: 1.6; background: #d9d9d9; }
+.project-block--image-text img, .project-block--image-text .project-image-placeholder { margin-bottom: 1.5rem; }
+.project-block--text .project-body { max-width: none; }
+.project-block--two-images, .project-block--image-left, .project-block--image-right { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 1.5rem; align-items: start; }
+.project-block--two-images { gap: 0.375rem; }
+.project-block--image-right img, .project-block--image-right .project-image-placeholder { grid-column: 2; grid-row: 1; }
+.project-block--image-right > div { grid-column: 1; grid-row: 1; }
+@media (max-width: 700px) {
+  .project-block--two-images, .project-block--image-left, .project-block--image-right { grid-template-columns: 1fr; }
+  .project-block--image-right img, .project-block--image-right .project-image-placeholder, .project-block--image-right > div { grid-column: auto; grid-row: auto; }
+  .project-block--image-right > div { order: -1; }
+}
+
+/* Muted Coral + Aged Paper for the projects gallery and detail pages. */
+:root.project-theme {
+  background-color: #f3ede7;
+  background-repeat: no-repeat, repeat, no-repeat, no-repeat, no-repeat;
+  background-size: 100% 100%, 160px 160px, 100% 760px, 100% 760px, 100% 100%;
+  background-image:
+    linear-gradient(to bottom, transparent 220px, #f3ede7 760px),
+    url("../images/grain.svg"),
+    radial-gradient(ellipse at 87% 8%, rgba(214, 169, 159, .7), transparent 55%),
+    radial-gradient(ellipse at 13% 25%, rgba(222, 213, 210, .85), transparent 52%),
+    linear-gradient(115deg, #ded5d2 0%, #e9d9ca 40%, #f3ede7 72%, #d6a99f 100%);
+}

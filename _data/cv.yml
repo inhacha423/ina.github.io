@@ -1,0 +1,158 @@
+---
+section_order:
+- key: education
+  title: Education
+- key: research_experience
+  title: Research Experience
+- key: professional_experience
+  title: Professional Experience
+- key: grants
+  title: Grants
+- key: teaching
+  title: Teaching
+- key: awards
+  title: Awards & Honors
+- key: invited_talks
+  title: Invited Talks and Panels
+research_interests: Human-Computer Interaction (HCI), Responsible AI, Science & Technology
+  Studies (STS), Tech Policy
+education:
+- date: Aug 2023 – Present
+  organization: Georgia Institute of Technology
+  location: Atlanta, United States
+  detail: Ph.D. in Digital Media
+  note: 'Advisor: Dr. Richmond Y. Wong'
+  minor: Minor in Public Policy
+- date: Feb 2019 – Aug 2021
+  organization: KAIST
+  location: Daejeon, Republic of Korea
+  detail: M.S. in Industrial Design
+  note: 'Advisor: Dr. Youn-kyung Lim'
+- date: Jan 2020 – Feb 2020
+  organization: Royal Institute of Technology (KTH)
+  location: Stockholm, Sweden
+  detail: Exchange Student, Electrical Engineering and Computer Science
+- date: Mar 2015 – Feb 2019
+  organization: Seoul National University
+  location: Seoul, Republic of Korea
+  detail: B.A. in Aesthetics and B.A. in Information Science and Culture
+  note: Graduated Cum Laude
+research_experience:
+- date: Aug 2026 – Dec 2026
+  organization: Toyota Research Institute
+  detail: Research Intern, Human-centric AI, Harmonious Communities
+professional_experience:
+- date: Nov 2021 – Jul 2023
+  organization: Upstage
+  detail: AI Product UX Designer
+- date: Jul 2020 – Aug 2020
+  organization: NAVER LABS
+  detail: HRI Design Intern
+grants:
+- date: Jan 2026 – Jul 2026
+  organization: Georgia Tech Arts Microgrant
+  detail: Principal investigator, $1,000
+- date: Jan 2025 – Sep 2025
+  organization: Seed Grant, Atlanta Interdisciplinary Artificial Intelligence Network
+  detail: Principal investigator, $5,000
+teaching:
+- date: Jan 2026 – May 2026
+  organization: Human-centered LLM Design Seminar, Georgia Tech
+  detail: Instructor
+- date: May 2025 – Dec 2025
+  organization: LLM Seminar, Georgia Tech
+  detail: Instructor
+- date: May 2024 – Jul 2024
+  organization: Justice-oriented Design and Critical Computing, Georgia Tech
+  detail: Instructor
+- date: Mar 2021 – Aug 2021
+  organization: User-Centered Design Methodologies (ID508), KAIST
+  detail: Teaching Assistant
+- date: Mar 2021 – Aug 2021
+  organization: Photo Techniques (ID218), KAIST
+  detail: Teaching Assistant
+- date: Mar 2019 – Aug 2019
+  organization: Department of Industrial Design, KAIST
+  detail: Academic Counseling Assistant
+- date: Mar 2019 – Aug 2019
+  organization: Life and Humanities (100.165), Seoul National University
+  detail: Student Tutor
+invited_talks:
+- date: Jul 2026
+  organization: Panel, Warfare of Art and Law podcast
+  detail: AI, Art & IP
+  note: Panel with Patrick McGranaghan and Haneen Alkenany
+- date: Mar 2026
+  organization: Guest Lecture, Department of Industrial Design, KAIST
+  detail: 'AI Adoption as a Site of Sociotechnical Negotiation'
+- date: Jan 2026
+  organization: Invited Talk, Department of Art & Technology, Sogang University
+  detail: 'Understanding the Value(s) of AI Adoption in UX Practice'
+- date: Dec 2025
+  organization: Invited Talk, UX Speaker Series, Ipsos
+  detail: Exploring AI Non-use and UX Practice
+- date: Nov 2025
+  organization: Invited Talk, Technologies and International Development Lab, Georgia Tech
+  detail: Untangling a Loaded Concept of AI Sovereignty
+- date: Oct 2025
+  organization: Roundtable Panel, AIAI Network
+  detail: Atlanta Interdisciplinary Artificial Intelligence Network Fall Kickoff Event
+- date: Aug 2025
+  organization: Invited Talk, Cornell Tech
+  detail: 'AI Sovereignty: Untangling a Loaded Concept in France, South Korea, and New Zealand'
+- date: Jul 2024
+  organization: Invited Talk, Mila
+  detail: Navigating Ethical Pathways in HCI Research
+- date: Nov 2021
+  organization: Guest Lecture, AI for Smart Life, KAIST
+  detail: Understanding the Issues of Addressing Fairness in Designing AI Agents
+- date: Apr 2021
+  organization: Invited Talk, Department of Information Science & Culture, Seoul National University
+  detail: Who Is the User of User-centered Design?
+academic_services:
+- heading: Editorial & Program Committee
+  entries:
+  - date: '2026'
+    organization: ACM CSCW Poster AC
+  - date: '2026'
+    organization: ACM DIS WIP AC
+- heading: Reviewer
+  note: 9 Special Recognitions for Outstanding Reviews from ACM CHI and 1 from ACM DIS
+  entries:
+  - date: 2026, 2027
+    organization: ACM FAccT
+  - date: 2026, 2027
+    organization: ACM CSCW
+  - date: 2022, 2024–2027
+    organization: ACM CHI
+  - date: 2023–2025
+    organization: ACM DIS
+  - date: '2026'
+    organization: NordiCHI
+  - date: 2024, 2025
+    organization: ACM CHI LBW
+  - date: '2025'
+    organization: ACM DIS WIP
+- heading: Volunteer
+  entries:
+  - date: '2026'
+    organization: ACM CSCW
+  - date: '2022'
+    organization: ACM FAccT
+  - date: 2021, 2024
+    organization: ACM DIS
+  - date: '2025'
+    organization: NYC FAccT Pre-conference
+awards:
+- date: May 2026
+  organization: Thanks-a-Teacher, Georgia Tech
+- date: Jun 2026
+  organization: Doctoral Colloquium, ACM FAccT 2026
+- date: Dec 2024
+  organization: Thanks-a-Teacher, Georgia Tech
+- date: Mar 2019 – Aug 2021
+  organization: Graduate Student Scholarship, Kwanjeong Educational Foundation
+- date: Sep 2019
+  organization: National Winner, James Dyson Design & Engineering Award
+- date: Feb 2019
+  organization: Best Undergraduate Thesis Award, Seoul National University

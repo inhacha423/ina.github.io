@@ -1,0 +1,67 @@
+/* Faded Lilac + Blush for the CV page. */
+:root.cv-theme {
+  background-color: #f5edec;
+  background-repeat: no-repeat, repeat, no-repeat, no-repeat;
+  background-size: 100% 100%, 160px 160px, 100% 560px, 100% 100%;
+  background-image:
+    linear-gradient(to bottom, transparent 84px, #f5edec 560px),
+    url("../images/grain.svg"),
+    linear-gradient(110deg, #dcd9e7 0%, #e7dfe5 38%, #f5edec 68%, #e5bcbd 100%),
+    linear-gradient(#f5edec, #f5edec);
+}
+
+/* CV typography: one scale for headings, entries, supporting text and dates. */
+.cv-page {
+  --cv-date-column: 10rem;
+  --cv-column-gap: 1.5rem;
+  width: min(100%, 860px);
+  margin: 2rem auto 0;
+  font-size: var(--type-compact);
+  line-height: 1.5;
+}
+.cv-header { margin-bottom: 2.75rem; }
+.cv-heading { display: flex; align-items: baseline; flex-wrap: wrap; gap: .5rem 1.5rem; }
+.cv-heading h1 { margin: 0; font: 500 var(--type-page)/1.15 var(--font-display); letter-spacing: -.025em; }
+.cv-header p { margin: .5rem 0 0; font-size: var(--type-meta); color: #57515b; }
+.cv-pdf { font: 500 var(--type-meta)/1.5 var(--font-display); }
+.cv-section { margin: 0 0 2.75rem; }
+.cv-interests { margin: 0; }
+.cv-section h2 {
+  margin: 0 0 1rem;
+  color: #4e4852;
+  font: 600 var(--type-secondary)/1.4 var(--font-display);
+  letter-spacing: .065em;
+  text-transform: uppercase;
+}
+.cv-entry {
+  display: grid;
+  grid-template-columns: var(--cv-date-column) minmax(0, 1fr);
+  gap: var(--cv-column-gap);
+  margin-bottom: 1.125rem;
+}
+.cv-entry > div { min-width: 0; }
+.cv-entry strong { font-weight: 500; }
+.cv-entry .cv-detail { color: #57515b; font-size: var(--type-secondary); font-weight: 400; }
+.cv-entry p { margin: .125rem 0; }
+.cv-entry small { display: block; margin-top: .125rem; color: #6c666c; font-size: var(--type-meta); line-height: 1.45; }
+.cv-date { color: #6c666c; font-size: var(--type-meta); line-height: 1.7; }
+.cv-publications .cv-entry p { color: #57515b; font-size: var(--type-secondary); }
+.cv-service-group { margin: 1.5rem 0 1.75rem; }
+.cv-services > h2 { margin-left: calc(var(--cv-date-column) + var(--cv-column-gap)); }
+.cv-service-heading {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: .5rem 1rem;
+  margin: 0 0 .6rem calc(var(--cv-date-column) + var(--cv-column-gap));
+}
+.cv-service-heading h3 { margin: 0; font: 500 var(--type-compact)/1.4 var(--font-display); }
+.cv-service-heading small { color: #6c666c; font-size: var(--type-meta); font-style: italic; }
+.cv-services .cv-entry { margin-bottom: .35rem; }
+.cv-services .cv-date { text-align: right; }
+@media (max-width: 600px) {
+  .cv-entry { grid-template-columns: 1fr; gap: .15rem; }
+  .cv-services > h2 { margin-left: 0; }
+  .cv-service-heading { margin-left: 0; }
+  .cv-services .cv-date { text-align: left; }
+}

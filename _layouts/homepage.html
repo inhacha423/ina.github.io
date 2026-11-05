@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"{% if page.nav_item == "projects" %} class="project-theme"{% endif %}>
+<html lang="en" class="{{ page.nav_item }}-theme">
 <head>
   <meta charset="utf-8">
   <meta name="color-scheme" content="only light">
@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&amp;family=Inter:wght@300;400;500;600&amp;display=swap">
   <title>{{ page.title | default: "Research portfolio" }}</title>
   <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+  {% assign page_css = '/assets/css/' | append: page.nav_item | append: '.css' %}
+  <link rel="stylesheet" href="{{ page_css | relative_url }}">
 </head>
 <body>
   <nav aria-label="Main navigation">
@@ -14,7 +16,7 @@
     <a href="{{ '/' | relative_url }}"{% if page.nav_item == "home" %} aria-current="page"{% endif %}>Home</a>
     <a href="{{ '/' | relative_url }}#publications">Research</a>
     <a href="{{ '/projects.html' | relative_url }}"{% if page.nav_item == "projects" %} aria-current="page"{% endif %}>Projects</a>
-    <a href="{{ site.data.files.cv | relative_url }}">CV</a>
+    <a href="{{ '/cv/' | relative_url }}"{% if page.nav_item == "cv" %} aria-current="page"{% endif %}>CV</a>
   </nav>
   <main>{{ content }}</main>
 </body>
