@@ -1,7 +1,0 @@
-@inproceedings{sung2023refining,
-  title = {Optimizing Test-Time Query Representations for Dense Retrieval},
-  author = {Sung, Mujeen and Park, Jungsoo and Kang, Jaewoo and Chen, Danqi and Lee, Jinhyuk},
-  booktitle = {Findings of ACL 2023},
-  year = {2023},
-  url = {https://aclanthology.org/2023.findings-acl.354/}
-}

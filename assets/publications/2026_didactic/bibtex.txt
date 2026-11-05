@@ -1,8 +1,0 @@
-@inproceedings{
-mendes2026making,
-title={Making Expert Reasoning Learnable with Self-Distillation},
-author={Ethan Mendes and Jungsoo Park and Alan Ritter},
-booktitle={Forty-third International Conference on Machine Learning},
-year={2026},
-url={https://openreview.net/forum?id=JG6f02X29a}
-}

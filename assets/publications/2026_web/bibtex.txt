@@ -1,8 +1,0 @@
-@inproceedings{
-chae2026safe,
-title={Safe and Scalable Web Agent Learning via Recreated Websites},
-author={Hyungjoo Chae and Jungsoo Park and Alan Ritter},
-booktitle={Forty-third International Conference on Machine Learning},
-year={2026},
-url={https://openreview.net/forum?id=x1OLusJLNe}
-}

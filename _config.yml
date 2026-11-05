@@ -1,7 +1,2 @@
-source:      .
-destination: ./_site
-includes:    ./_includes
-
-collections:
-  projects:
-    output: true
+exclude:
+  - README.md

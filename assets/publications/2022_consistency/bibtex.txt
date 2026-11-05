@@ -1,7 +1,0 @@
-@inproceedings{park2022consistency,
-  title = {Consistency Training with Virtual Adversarial Discrete Perturbation},
-  author = {Park, Jungsoo and Kim, Gyuwan and Kang, Jaewoo},
-  booktitle = {NAACL 2022},
-  year = {2022},
-  url = {https://aclanthology.org/2022.naacl-main.414/}
-}

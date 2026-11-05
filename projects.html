@@ -1,0 +1,14 @@
+---
+layout: homepage
+nav_item: projects
+title: Projects
+---
+<section class="projects-page">
+<h1>Projects</h1>
+{% assign projects = site.data.projects.projects | where_exp: "item", "item.title != nil" %}
+{% for project in projects %}
+  <article><h2><a href="{{ project.url }}">{{ project.title }}</a></h2><p>{{ project.subtitle }}</p></article>
+{% else %}
+  <p>No projects listed yet.</p>
+{% endfor %}
+</section>

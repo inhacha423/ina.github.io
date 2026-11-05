@@ -1,7 +1,0 @@
-@article{park2025anticipatory,
-  title = {Anticipatory Evaluation of Language Models},
-  author = {Park, Jungsoo and Mendes, Ethan and Stanovsky, Gabriel and Ritter, Alan},
-  journal = {arXiv preprint arXiv:2509.20645},
-  year = {2025},
-  url = {https://arxiv.org/abs/2509.20645}
-}

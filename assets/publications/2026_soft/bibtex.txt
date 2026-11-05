@@ -1,8 +1,0 @@
-@inproceedings{
-he2026soft,
-title={Soft Token Alignment for Cross-Lingual Reasoning},
-author={He, Jiayi and Park, Jungsoo and Xu, Wei and Ritter, Alan},
-booktitle={Neurips},
-year={2026},
-url={https://openreview.net/forum?id=JG6f02X29a}
-}

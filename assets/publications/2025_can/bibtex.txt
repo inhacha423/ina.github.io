@@ -1,7 +1,0 @@
-@inproceedings{park2025can,
-  title = {Can LLMs Help Uncover Insights about LLMs? A Large-Scale, Evolving Literature Analysis of Frontier LLMs},
-  author = {Park, Jungsoo and Kang, Junmo and Stanovsky, Gabriel and Ritter, Alan},
-  booktitle = {ACL 2025 (Long Papers)},
-  year = {2025},
-  url = {https://aclanthology.org/2025.acl-long.998/}
-}

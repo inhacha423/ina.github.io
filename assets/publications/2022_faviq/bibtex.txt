@@ -1,7 +1,0 @@
-@inproceedings{park2022faviq,
-  title = {FaVIQ: FAct Verification from Information-seeking Questions},
-  author = {Park, Jungsoo and Min, Sewon and Kang, Jaewoo and Zettlemoyer, Luke and Hajishirzi, Hannaneh},
-  booktitle = {ACL 2022 (Long Papers)},
-  year = {2022},
-  url = {https://aclanthology.org/2022.acl-long.354/}
-}

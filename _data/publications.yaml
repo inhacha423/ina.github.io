@@ -1,118 +1,128 @@
-papers:   
-
-  - title: "Distribution-Aware Reward: Reinforcement Learning over Predictive Distributions for LLM Regression"  
-    authors: "<b>Jungsoo Park</b>, Hyungjoo Chae, Ethan Mendes, Jay DeYoung, Varsha Kishore, Wei Xu,  Alan Ritter"  
-    venue: "arXiv preprint"
-    paper_pdf: "https://arxiv.org/pdf/2605.20740"
-    bibtex: "/assets/publications/2026_dar/bibtex.txt"
-    image: "/assets/publications/2023_optimizing/figure.png"
-    year: 2026
-    selected: y
-
-  - title: "Soft Token Alignment for Cross-Lingual Reasoning"  
-    authors: "Ivy He, <b>Jungsoo Park</b>, Wei Xu, Alan Ritter"  
-    venue: "NeurIPS 2026"
-    paper_pdf: "https://arxiv.org/pdf/2606.26466"
-    bibtex: "/assets/publications/2026_soft/bibtex.txt"
-    image: "/assets/publications/2023_optimizing/figure.png"
-    year: 2026
-    selected: y
-
-  - title: "Who Pays More for Safety? Measuring the Disparate Cost of Safety Alignment across Languages"  
-    authors: "Chanwoong Yoon, <b>Jungsoo Park</b>, Alan Ritter"  
-    venue: "EMNLP 2026"
-    paper_pdf: "https://arxiv.org/pdf/2608.22490"
-    bibtex: "/assets/publications/2026_who/bibtex.txt"
-    image: "/assets/publications/2023_optimizing/figure.png"
-    year: 2026
-    selected: y
-
-  - title: "Safe and Scalable Web Agent Learning via Recreated Websites"  
-    authors: "Hyungjoo Chae, <b>Jungsoo Park</b>, Alan Ritter"  
-    venue: "ICML 2026"
-    paper_pdf: "https://arxiv.org/pdf/2603.10505"
-    bibtex: "/assets/publications/2026_web/bibtex.txt"
-    image: "/assets/publications/2023_optimizing/figure.png"
-    year: 2026
-    selected: y
-
-  - title: "Didactic to Constructive: Turning Expert Solutions into Learnable Reasoning"  
-    authors: "Ethan Mendes, <b>Jungsoo Park</b>, Alan Ritter"  
-    venue: "ICML 2026"
-    paper_pdf: "https://arxiv.org/pdf/2602.02405"
-    bibtex: "/assets/publications/2026_didactic/bibtex.txt"
-    image: "/assets/publications/2023_optimizing/figure.png"
-    year: 2026  
-    selected: y
-
-  - title: "Anticipatory Evaluation of Language Models"  
-    authors: "<b>Jungsoo Park</b>, Ethan Mendes, Gabriel Stanovsky, Alan Ritter"  
-    venue: "arXiv preprint"
-    paper_pdf: "https://arxiv.org/pdf/2509.20645"
-    bibtex: "/assets/publications/2025_anticipatory/bibtex.txt"
-    image: "/assets/publications/2023_optimizing/figure.png"
-    year: 2025  
-    selected: y
-
-  - title: "Can LLMs Help Uncover Insights about LLMs? A Large-Scale, Evolving Literature Analysis of Frontier LLMs"  
-    authors: "<b>Jungsoo Park</b>, Junmo Kang, Gabriel Stanovsky, Alan Ritter"  
-    venue: "ACL 2025"
-    paper_pdf: "https://arxiv.org/pdf/2502.18791v2"
-    bibtex: "/assets/publications/2025_can/bibtex.txt"
-    image: "/assets/publications/2023_optimizing/figure.png"
-    year: 2025  
-    selected: y
-
-  - title: "Optimizing Test-Time Query Representations for Dense Retrieval"  
-    authors: "Mujeen Sung, <b>Jungsoo Park</b>, Jaewoo Kang, Danqi Chen, Jinhyuk Lee"  
-    venue: "EMNLP-Findings 2023"
-    paper_pdf: "https://aclanthology.org/2023.findings-acl.354.pdf"
-    bibtex: "/assets/publications/2023_optimizing/bibtex.txt"
-    image: "/assets/publications/2023_optimizing/figure.png"
-    year: 2023  
-    selected: y
-  
-  - title: "Empowering Sentence Encoders with Prompting and Label Retrieval for Zero-shot Text Classification"  
-    authors: "Jimin Hong*, <b>Jungsoo Park*</b>, Daeyoung Kim*, Seongjae Choi, Bokyung Son, Jaewook Kang"  
-    venue: "arXiv preprint"  
-    paper_pdf: "https://arxiv.org/pdf/2212.10391"
-    bibtex: "/assets/publications/2023_empower/bibtex.txt"
-    image: "/assets/publications/2023_empower/tess.png"
-    year: 2023  
-    selected: y
-  
-  - title: "FaVIQ: FAct Verification from Information-seeking Questions"  
-    authors: "<b>Jungsoo Park*</b>, Sewon Min*, Jaewoo Kang, Luke Zettlemoyer, Hannaneh Hajishirzi"  
-    venue: "ACL 2022"  
-    paper_pdf: "https://aclanthology.org/2022.acl-long.354.pdf"
-    bibtex: "/assets/publications/2022_faviq/bibtex.txt"
-    image: "/assets/publications/2022_faviq/faviq.png"
-    year: 2022   
-    selected: y
-
-  - title: "Consistency Training with Virtual Adversarial Discrete Perturbation"  
-    authors: "<b>Jungsoo Park*</b>, Gyuwan Kim*, Jaewoo Kang"  
-    venue: "NAACL 2022" 
-    paper_pdf: "https://aclanthology.org/2022.naacl-main.414.pdf" 
-    bibtex: "/assets/publications/2022_consistency/bibtex.txt"
-    image: "/assets/publications/2022_consistency/consistency.png"
-    year: 2022
-    selected: y
-
-  - title: "Learn to Resolve Conversational Dependency: A Consistency Training Framework for Conversational Question Answering"  
-    authors: "Gangwoo Kim, Hyunjae Kim, <b>Jungsoo Park</b>, Jaewoo Kang"  
-    venue: "ACL 2021"
-    paper_pdf: "https://aclanthology.org/2021.acl-long.478.pdf"
-    bibtex: "/assets/publications/2021_learn_to_resolve/bibtex.txt"
-    image: "/assets/publications/2021_learn_to_resolve/excord.png"
-    year: 2021 
-    selected: y
-  
-  - title: "Adversarial Subword Regularization for Robust Neural Machine Translation"  
-    authors: "<b>Jungsoo Park</b>, Mujeen Sung, Jinhyuk Lee, Jaewoo Kang"  
-    venue: "EMNLP Findings 2020"  
-    paper_pdf: "https://aclanthology.org/2020.findings-emnlp.175.pdf"
-    bibtex: "/assets/publications/2020_advsr/bibtex.txt"
-    image: "/assets/publications/2020_advsr/advsr.png"
-    year: 2020 
-    selected: y 
+---
+papers:
+- title: 'The Acceleration Trap: “Throwing Spaghetti at the Wall” When Integrating
+    GenAI into Legacy Products'
+  venue: In Review
+  links: []
+- title: 'A Systematic Review of AI-at-Work Research in HCI: What We Study, How We
+    Study It, and What Should Come Next'
+  venue: In Review
+  links: []
+- title: 'Navigating Organizational Infrastructures: Addressing Ethics Uncertainty
+    Experienced by Middle Managers in AI Development'
+  authors: <b> Ajit Pillai*, <span class="thisauthor">Inha Cha</span></b>*, and Richmond
+    Y. Wong
+  venue: ACM Conference on Fairness, Accountability, and Transparency 2026 <a class="tag"
+    target="_blank" href="https://facctconference.org/2026/index.html">(FAccT 2026)</a>
+  links:
+  - url: https://dl.acm.org/doi/10.1145/3805689.3812407
+    label: pdf
+- title: 'The Values of Value in AI Adoption: Rethinking Efficiency in UX Designers''
+    Workplaces'
+  authors: <b><span class="thisauthor">Inha Cha</span></b>, Catherine Wieczorek, and
+    Richmond Y. Wong
+  venue: ACM Conference on Human Factors in Computing System 2026 <a class="tag"
+    target="_blank" href="https://chi2026.acm.org/">(CHI 2026)</a>
+  links:
+  - url: https://dl.acm.org/doi/10.1145/3772318.3790429
+    label: pdf
+- title: 'Beyond Claiming Sovereign AI: Motivations, Challenges, and Contradictions
+    in Developing and Deploying Local Foundation Models in South Korea'
+  authors: <b><span class="thisauthor">Inha Cha</span></b> and Richmond Y. Wong
+  venue: ACM Conference on Human Factors in Computing System 2026 <a class="tag"
+    target="_blank" href="https://chi2026.acm.org/">(CHI 2026)</a>
+  links:
+  - url: https://dl.acm.org/doi/10.1145/3772318.3790666
+    label: pdf
+- title: "“My Body is Not Your Porn”: Identifying Trends of Harm and Oppression through
+    a Sociotechnical Genealogy of Digital Sexual Violence in South Korea"
+  authors: <b><span class="thisauthor">Inha Cha</span></b>*, Yeonju Jang*, Haesoo
+    Kim*, Seora Park*, Joo Young Park*, and EunJeong Cheon
+  venue: ACM SIGCHI Conference on Computer-Supported Cooperative Work &amp; Social
+    Computing 2026 <a class="tag" target="_blank" href="https://cscw.acm.org/2026/">(CSCW
+    2026)</a>
+  links:
+  - url: https://dl.acm.org/doi/full/10.1145/3788066
+    label: pdf
+- title: 'Culture is Everywhere: A Call for Intentionally Cultural Evaluation'
+  authors: Juhyun Oh, <b><span class="thisauthor">Inha Cha</span></b>, Michael Saxon,
+    Hyunseung Lim, Shaily Bhatt, Alice Oh
+  venue: Conference on Empirical Methods in Natural Language Processing 2025 <a class="tag"
+    target="_blank" href="https://2025.emnlp.org/">(EMNLP 2025 Findings)</a>
+  links:
+  - url: https://aclanthology.org/2025.findings-emnlp.1043/
+    label: pdf
+- title: Discovering Factor Level Preferences to Improve Human-Model Alignment
+  authors: Juhyun Oh, Eunsu Kim, Jiseon Kim, Wenda Xu, <b><span class="thisauthor">Inha
+    Cha</span></b>, William Yang Wang, Alice Oh
+  venue: Conference on Empirical Methods in Natural Language Processing 2025 <a class="tag"
+    target="_blank" href="https://2025.emnlp.org/">(EMNLP 2025 Findings)</a>
+  links:
+  - url: https://aclanthology.org/2025.findings-emnlp.1045/
+    label: pdf
+- title: Understanding Socio-technical Factors Configuring AI Non-Use in UX Work Practices
+  authors: <b><span class="thisauthor">Inha Cha</span></b> and Richmond Wong
+  venue: ACM Conference on Human Factors in Computing System 2025 (CHI 2025)
+  links:
+  - url: https://doi.org/10.1145/3706598.3713140
+    label: pdf
+- title: 'Ethics Pathways: A Design Activity for Reflecting on Ethical Engagement
+    in HCI Research'
+  authors: <b><span class="thisauthor">Inha Cha</span></b>*, Ajit Pillai*, Richmond
+    Wong
+  venue: ACM Conference on Designing Interactive Systems 2024 <a class="tag" target="_blank"
+    href="https://dl.acm.org/doi/proceedings/10.1145/3643834">(DIS 2024)</a>
+  links:
+  - url: https://dl.acm.org/doi/10.1145/3643834.3660714
+    label: pdf
+  - url: https://drive.google.com/file/d/1lXCQFDEBIgkR3piV8BvGiyAOH7TtlcZM/view?usp=sharing
+    label: resource
+- title: 'Investigating the Potential of Group Recommendation Systems As a Medium
+    of Social Interactions: A Case of Experiences Between Two Users'
+  authors: |-
+    Daehyun Kwak, Soobin Park,
+                  <b><span class="thisauthor">Inha Cha</span></b>, Hankyung Kim, Youn-kyung Lim
+  venue: ACM Conference on Human Factors in Computing Systems 2024 <a class="tag"
+    target="_blank" href="https://dl.acm.org/doi/proceedings/10.1145/3613904">(CHI
+    2024)</a>
+  links:
+  - url: https://dl.acm.org/doi/10.1145/3613904.3642544f
+    label: pdf
+- title: Unlocking the Tacit Knowledge of Data Work in Machine Learning
+  authors: <b><span class="thisauthor">Inha Cha</span></b>*, Juhyun Oh*, Cheul Young
+    Park*, Jiyoon Han, Hwalsuk Lee
+  venue: ACM Conference on Human Factors in Computing Systems 2023 <a class="tag"
+    target="_blank" href="https://dl.acm.org/doi/proceedings/10.1145/3544549">(CHI
+    LBW 2023)</a>
+  links:
+  - url: https://dl.acm.org/doi/10.1145/3544549.3585616
+    label: pdf
+- title: Exploring the Use of a Voice-based Conversational Agent to Empower Adolescents
+    with Autism Spectrum Disorder
+  authors: <b><span class="thisauthor">Inha Cha</span></b>, Sung-In Kim, Hwajung Hong,
+    Heejeong Yoo, Youn-kyung Lim
+  venue: ACM Conference on Human Factors in Computing Systems 2021 <a class="tag"
+    target="_blank" href="https://dl.acm.org/doi/proceedings/10.1145/3411764">(CHI
+    2021)</a>
+  links:
+  - url: https://dl.acm.org/doi/10.1145/3411764.3445116
+    label: pdf
+- title: 'Toward Becoming a Better Self: Understanding Self-Tracking Experiences of
+    Adolescents with Autism Spectrum Disorder Using Custom Trackers'
+  authors: "Sung-In Kim, Eunkyung Jo, Myeonghan Ryu, \n              <b><span class=\"thisauthor\">Inha
+    Cha</span></b>, Young-Ho Kim, Heejung Yoo, Hwajung Hong"
+  venue: EAI International Conference on Pervasive Computing Technologies for Healthcare
+    2019 <a class="tag" target="_blank" href="https://dl.acm.org/doi/proceedings/10.1145/3329189">(Pervasive
+    Health 2019)</a>
+  links:
+  - url: https://dl.acm.org/doi/10.1145/3329189.3329209
+    label: pdf
+- title: A Study for Specializing a Chatbot-based Self-Management Program for Adolescents
+    with Autism Spectrum Disorder
+  authors: "Sung-In Kim, Myeonghan Ryu, Eunkyung Jo, \n              <b><span class=\"thisauthor\">Inha
+    Cha</span></b>, Young-Ho Kim, Heejung Yoo, Hwajung Hong"
+  venue: Proceedings of HCI KOREA 2019  <a class="tag" target="_blank" href="https://dl.acm.org/doi/proceedings/10.1145/3329189">(HCI
+    Korea 2019)</a>
+  links:
+  - url: https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE08008121
+    label: pdf

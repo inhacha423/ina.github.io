@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="color-scheme" content="only light">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap">
+  <title>{{ page.title | default: "Research portfolio" }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+</head>
+<body>
+  <nav aria-label="Main navigation">
+    <a class="mast" href="{{ '/' | relative_url }}" aria-label="Inha Cha – Home"><img src="{{ site.data.files.logo | relative_url }}" alt="Inha Cha"></a>
+    <a href="{{ '/' | relative_url }}"{% if page.nav_item == "home" %} aria-current="page"{% endif %}>Home</a>
+    <a href="{{ '/' | relative_url }}#publications">Research</a>
+    <a href="{{ '/projects.html' | relative_url }}"{% if page.nav_item == "projects" %} aria-current="page"{% endif %}>Projects</a>
+    <a href="{{ site.data.files.cv | relative_url }}">CV</a>
+  </nav>
+  <main>{{ content }}</main>
+</body>
+</html>

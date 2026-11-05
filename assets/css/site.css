@@ -1,0 +1,347 @@
+:root {
+  --highlight: #d8baff;
+  --highlight-ink: #311947;
+  --type-meta: .875rem;
+  --type-body: 1rem;
+  --type-title: 1.25rem;
+  color-scheme: only light;
+}
+
+::selection {
+  background: var(--highlight);
+  color: var(--highlight-ink);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-underline-offset: 3px;
+}
+
+a:not(.mast):focus-visible {
+  color: var(--highlight-ink);
+  background-image: linear-gradient(var(--highlight), var(--highlight));
+  background-size: 100% 1.22em;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+@media (hover: hover) {
+  a:not(.mast):hover {
+    color: var(--highlight-ink);
+    background-image: linear-gradient(var(--highlight), var(--highlight));
+    background-size: 100% 1.22em;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+}
+
+body {
+  color: #202827;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  line-height: 1.42;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding-top: clamp(26px,3.5vw,48px);
+  padding-bottom: clamp(120px,14vw,192px);
+  padding-inline: clamp(24px,7vw,84px);
+}
+
+main {
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border: 0;
+  gap: 26px;
+}
+
+nav a {
+  text-align: center;
+  text-decoration: none;
+  padding: 12px 0;
+  font-size: var(--type-meta);
+  text-transform: uppercase;
+}
+
+nav a:hover,nav a:focus-visible {
+  text-decoration: underline;
+}
+
+nav a.mast {
+  margin-right: auto;
+  font-size: var(--type-title);
+  font-weight: 600;
+  letter-spacing: -.045em;
+}
+
+nav a[aria-current="page"] {
+  text-decoration: underline;
+  text-decoration-color: #643a85;
+  text-underline-offset: 6px;
+}
+
+.intro {
+  padding: 36px 0 30px;
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: min(30%,270px) minmax(0,1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.portrait {
+  width: min(100%,270px);
+  aspect-ratio: 1;
+  background: transparent;
+}
+
+.bio p {
+  margin: 0;
+}
+
+.bio {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 4px 0;
+  font-size: var(--type-body);
+  line-height: 1.5;
+  gap: 12px;
+}
+
+#publications {
+  padding-top: 10px;
+  margin: 0;
+}
+
+.papers {
+  margin: 24px 0 0;
+  font-size: var(--type-meta);
+  line-height: 20px;
+}
+
+#publications header {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+}
+
+.contribution {
+  margin: 0;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: #6c666c;
+}
+
+.papers article {
+  margin: 0;
+}
+
+.papers article + article {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(74,60,68,.15);
+}
+
+.papers article h3 {
+  margin: 0 0 5px;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: -.025em;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 9px;
+  margin-top: 2px;
+}
+
+.links a + a::before {
+  content: "·";
+  margin-right: 9px;
+  color: #596660;
+}
+
+.links a {
+  text-decoration: none;
+  border: 0;
+  border-radius: 0;
+  color: #643a85;
+  padding: 4px 0;
+  min-width: auto;
+  font-size: var(--type-meta);
+}
+
+#publications h1,
+.home-news h2 {
+  margin: 0 0 14px;
+  padding-bottom: 8px;
+  border: 0;
+  color: #53605e;
+  font-size: var(--type-meta);
+  font-weight: 600;
+  line-height: 1.42;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+#publications h1 {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+@media(max-width:700px) {
+  .intro {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .intro {
+    padding: 28px 0;
+  }
+  nav {
+    gap: 14px;
+  }
+  .portrait {
+    width: min(70%,300px);
+  }
+}
+
+:root {
+  background-color: #f6f1f2;
+  background-repeat: no-repeat,repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat;
+  background-size: 100% 100%,160px 160px,100% 560px,100% 560px,100% 560px,100% 560px,100% 100%;
+  background-image: linear-gradient(to bottom,transparent 84px,#f6f1f2 560px),url("../images/grain.svg"),
+    radial-gradient(ellipse at 83% 12%,rgba(255,94,96,.87),transparent 43%),
+    radial-gradient(ellipse at 78% 76%,rgba(255,166,104,.83),transparent 47%),
+    radial-gradient(ellipse at 42% 95%,#fff0c1,transparent 40%),
+    linear-gradient(118deg,#ffcfdc 1%,#f7e6e8 38%,#ffc5ba 88%),
+    linear-gradient(#f6f1f2,#f6f1f2);
+}
+
+body {
+  background: transparent;
+}
+
+a:focus-visible {
+  outline: 2px solid #643a85;
+  outline-offset: 3px;
+}
+
+.papers b,.papers strong {
+  font-weight: 600;
+}
+
+.home-news {
+  margin: 12px 0 32px;
+}
+
+.home-news h2 {
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.news-feed {
+  --scroll-thumb: #e7a4a1;
+  margin: 0;
+  padding: 0 12px 0 0;
+  list-style: none;
+  max-height: var(--news-height, 5.25rem);
+  overflow-y: auto;
+  scroll-snap-type: y proximity;
+  scrollbar-color: var(--scroll-thumb) #f5eceb;
+}
+
+.news-feed li {
+  display: grid;
+  grid-template-columns: 5.5rem minmax(0,1fr);
+  align-content: center;
+  gap: 12px;
+  padding-block: 3px;
+  scroll-snap-align: start;
+  font-size: var(--type-body);
+  line-height: 1.45;
+}
+
+.news-date {
+  font-size: var(--type-meta);
+  color: #655b66;
+}
+
+.news-feed:focus-visible {
+  outline: 2px solid #643a85;
+  outline-offset: 3px;
+}
+
+@media(max-width:700px) {
+  .news-feed li {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+}
+
+.news-feed::-webkit-scrollbar {
+  width: 8px;
+}
+
+.news-feed::-webkit-scrollbar-thumb {
+  background: #e7a4a1;
+  border-radius: 8px;
+}
+
+.news-feed::-webkit-scrollbar-track {
+  background: #f5eceb;
+}
+
+.projects-page {
+  padding-block: 36px;
+}
+
+.projects-page h1 {
+  margin-top: 0;
+  font-size: 19px;
+  line-height: 1.4;
+}
+
+.projects-page article {
+  margin: 24px 0 28px;
+}
+
+nav .mast img {
+  display: block;
+  width: 86px;
+  height: auto;
+}
+
+img.portrait {
+  display: block;
+  height: auto;
+  object-fit: cover;
+}
+
+@media(max-width:420px) {
+  nav .mast img {
+    width: 62px;
+  }
+  nav {
+    gap: 10px;
+  }
+}

@@ -1,7 +1,0 @@
-@article{hong2022empower,
-  title = {Empowering Sentence Encoders with Prompting and Label Retrieval for Zero-shot Text Classification},
-  author = {Hong, Jimin and Park, Jungsoo and Kim, Daeyoung and Choi, Seongjae and Son, Bokyung and Kang, Jaewook},
-  journal = {arXiv preprint arXiv:2212.10391},
-  year = {2022},
-  url = {https://arxiv.org/abs/2212.10391}
-}

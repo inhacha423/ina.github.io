@@ -1,202 +1,53 @@
 ---
-layout: default
+layout: homepage
+nav_item: home
 ---
-<!-- ========== About ========== -->
-<div class="docs-section" id="about">
-  <h4>About</h4>
-  <p>
-    <p>
-      Hello! I am a Ph.D. student in the <a href="https://www.ic.gatech.edu/">School of Interactive Computing</a> at <a href="https://www.gatech.edu">Georgia Tech</a>, advised by <a href="http://aritter.github.io">Alan Ritter</a>. Before starting my Ph.D., I worked as an Applied Scientist at <a href="https://clova.ai/en">NAVER Clova</a>, where I contributed to the development of a vision-language foundation model, <a href="https://clova.ai/en/tech-blog/en-introducing-hyperclova-x-vision">HyperCLOVA X Vision</a>. I received my B.E. in Statistics, B.S. in Computer Science &amp; Engineering, and M.E. in Software from <a href="https://www.korea.edu/mbshome/mbs/en/index.do">Korea University</a>.
-    </p>
-    <p>
-      My research focuses on improving the reasoning and prediction capabilities of language models by learning from distributions of model trajectories. I am interested in developing methods to robustly optimize over these trajectories and extract useful signals from them to improve model behavior. I am particularly interested in test-time discovery, and more broadly in connecting it with LLM-based prediction to enable more generalizable discovery and decision-making.
-  </p>
-</div>
-
-
-<!-- ========== Education ========== -->
-<div class="docs-section" id="education">
-  <h4>Education</h4>
-        <div class="paper">
-          <p class="title">
-            <b>Georgia Institute of Technology <b style="float:right;">Atlanta, GA, USA</b></b>
-          </p>
-          <p>Ph.D. in Computer Science <b style="float:right;">Aug. 2024 - Present</b></p>
-          <p>Advisor: Alan Ritter</p>
-        </div>
-
-        <div class="paper">
-          <p class="title">
-            <b>Korea University <b style="float:right;">Seoul, Korea</b></b>
-          </p>
-          <p>M.E. in Computer Science & Engineering <b style="float:right;">Mar. 2019 - Aug. 2021</b></p>
-          <p>Advisor: Jaewoo Kang</p>
-        </div>
-
-        <div class="paper">
-          <p class="title">
-            <b>Korea University <b style="float:right;">Seoul, Korea</b></b>
-          </p>
-          <p>B.E. in Statistics, B.S. in Computer Science & Engineering <b style="float:right;">Mar. 2013 - Feb. 2019</b></p>
-          <p>Magna Cum Laude</p>
-        </div>
-</div>
-
-<!-- ========== Experience ========== -->
-<div class="docs-section" id="experience">
-  <h4>Research Experience</h4>
-        <div class="paper">
-          <p class="title">
-            <b>Allen Institute of Artificial Intelligence <b style="float:right;">Seattle, WA, USA</b></b>
-          </p>
-          <p>Research Intern (Ph.D.) <b style="float:right;">May. 2026 - Present</b></p>
-          <p>Mentor: Jay DeYoung</p>
-        </div>
-
-        <div class="paper">
-          <p class="title">
-            <b>Georgia Institute of Technology <b style="float:right;">Atlanta, GA, USA</b></b>
-          </p>
-          <p>Graduate Research Assistant (Ph.D.) <b style="float:right;">Aug. 2024 - Present</b></p>
-          <p>Advisor: Alan Ritter</p>
-        </div>
-
-        <div class="paper">
-          <p class="title">
-            <b>Naver Clova <b style="float:right;">Seongnam, Korea</b></b>
-          </p>
-          <p>Applied Scientist <b style="float:right;">Jul. 2021 - Aug. 2024</b></p>
-          <p>Research Intern <b style="float:right;">July. 2020 - Dec. 2020</b></p>
-        </div>
-
-        <div class="paper">
-          <p class="title">
-            <b>University of Washington <b style="float:right;">Seattle, WA, USA</b></b>
-          </p>
-          <p>Visiting Scholar (remote) <b style="float:right;">Jan. 2021 - Jul. 2021</b></p>
-          <p>Mentor: Sewon Min Advisor: Hannaneh Hajishirzi, Luke Zettlemoyer </p>
-        </div>
-
-        <div class="paper">
-          <p class="title">
-            <b>Korea University <b style="float:right;">Seoul, Korea</b></b>
-          </p>
-          <p>Graduate Research Assistant (M.E.) <b style="float:right;">Mar. 2019 - Aug. 2021</b></p>
-          <p>Advisor: Jaewoo Kang </p>
-        </div>
-</div>
-
-<!-- ========== PUBLICATIONS ========== -->
-<div class="docs-section" id="publications">
-  <h4>Publications</h4>
-
-  <!-- <p>Most recent publications on <a href="{{ site.data.main_info.google_scholar }}" target="_blank">Google Scholar</a>.<br/> -->
-  <sup>*</sup> indicates equal contribution.
-  </p>
-
-  <!-- <ul class="tab-nav">
-    <li><div class="button active" data-ref="#papers-selected">Selected</div></li>
-    <li><div class="button" data-ref="#papers-all">All</div></li>
-  </ul> -->
-
-  <div class="tab-content">
-    <div class="tab-pane active" id="papers-selected">
-      {% assign selected_papers = site.data.publications.papers | where: "selected", "y" %}
-      {% for paper in selected_papers %}
-        <div class="paper">
-          <div class="row">
-            <!-- <div class="four columns">
-              <div class="figure">
-                <img src="{{ paper.image }}" width="100%">
-              </div>
-            </div> -->
-            <div class="twelve columns">
-              <p class="title"><b>{{ paper.title }}</b></p>
-              <p>{{ paper.authors }}</p>
-              <p><i>{{ paper.venue }}</i></p>
-              <div class="paper-buttons">
-                {% if paper.paper_pdf %}
-                  <a class="button" href="{{ paper.paper_pdf }}" target="_blank">Paper</a>
-                {% endif %}
-
-                {% if paper.slides %}
-                  <a class="button" href="{{ paper.slides | prepend: site.baseurl }}" target="_blank">Slides</a>
-                {% endif %}
-
-                {% if paper.poster %}
-                  <a class="button" href="{{ paper.poster | prepend: site.baseurl }}" target="_blank">Poster</a>
-                {% endif %}
-
-                {% if paper.video %}
-                  <a class="button" href="{{ paper.video }}" target="_blank">Video</a>
-                {% endif %}
-
-                {% if paper.code %}
-                  <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
-                {% endif %}
-
-                {% if paper.blog %}
-                <a class="button" href="{{ paper.blog }}" target="_blank">Blog</a>
-                {% endif %}
-
-                {% if paper.bibtex %}
-                  <a class="button" href="{{ paper.bibtex }}" target="_blank">BibTeX</a>
-                {% endif %}
-              </div>
-            </div>
-          </div>
-        </div>
-      {% endfor %}
-    </div>
-
-    <!-- <div class="tab-pane" id="papers-all">
-      {% for paper in site.data.publications.papers %}
-        <div class="paper">
-          <div class="row">
-            <div class="four columns">
-              <div class="figure">
-                <img src="{{ paper.image }}" width="100%">
-              </div>
-            </div>
-            <div class="eight columns">
-              <p class="title"><b>{{ paper.title }}</b></p>
-              <p>{{ paper.authors }}</p>
-              <p><i>{{ paper.venue }}</i></p>
-              <div class="paper-buttons">
-                {% if paper.paper_pdf %}
-                  <a class="button" href="{{ paper.paper_pdf | prepend: site.baseurl }}" target="_blank">Paper</a>
-                {% endif %}
-
-                {% if paper.slides %}
-                  <a class="button" href="{{ paper.slides | prepend: site.baseurl }}" target="_blank">Slides</a>
-                {% endif %}
-
-                {% if paper.poster %}
-                  <a class="button" href="{{ paper.poster | prepend: site.baseurl }}" target="_blank">Poster</a>
-                {% endif %}
-
-                {% if paper.video %}
-                  <a class="button" href="{{ paper.video }}" target="_blank">Video</a>
-                {% endif %}
-
-                {% if paper.code %}
-                  <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
-                {% endif %}
-              </div>
-            </div>
-          </div>
-        </div>
+<section class="intro" aria-label="Introduction">
+  <img class="portrait" src="{{ site.data.files.portrait | relative_url }}" alt="Inha Cha">
+  <div class="bio">
+    <p>Inha Cha is a PhD Student at Georgia Tech working with <a href="https://richmondywong.com/">Dr. Richmond Y. Wong</a> and <a href="https://carldisalvo.com/">Dr. Carl DiSalvo</a>. Her research sits at the intersection of Human-Computer Interaction (HCI), Science and Technology Studies (STS), and technology policy. She explores how AI is (re)shaping everyday work and how workers can actively shape these transformations. She is particularly interested in how workers can build alternative forms of labor relations in the AI era, and how workers, labor movements, and broader social movements can challenge existing power structures and shape alternative futures.</p>
+    <p>Before joining Georgia Tech, she worked as an AI product UX designer at Upstage. She completed her master’s degree in the Department of Industrial Design at KAIST, advised by Dr. Youn-kyung Lim, and earned her undergraduate degree in Aesthetics and Information Science and Culture at Seoul National University.</p>
+  </div>
+</section>
+<section class="home-news" aria-labelledby="news-heading">
+  <h2 id="news-heading">News</h2>
+  <ul class="news-feed" tabindex="0" aria-labelledby="news-heading">
+    {% for item in site.data.news %}
+    <li><span class="news-date">{{ item.date | escape }}</span><span>{{ item.text | escape }}</span></li>
     {% endfor %}
-    </div> -->
-
-</div>
-
-<!-- ========== RESUME ==========
-<div class="docs-section" id="resume">
-  <h4>Vitæ</h4>
-
-  <p>Full CV in <a href={{ "/assets/cv/CV__Jungsoo_Park_.pdf" | prepend: site.baseurl }} target="_blank">PDF</a>.</p>
-
-</div> -->
-
-</div>
+  </ul>
+  <script>
+    {
+      const feed = document.querySelector('.news-feed');
+      const rows = Array.from(feed.children).slice(0, 3);
+      const fitRows = () => {
+        const height = rows.reduce((sum, row) => sum + row.getBoundingClientRect().height, 0);
+        feed.style.setProperty('--news-height', Math.ceil(height) + 'px');
+      };
+      const observer = new ResizeObserver(fitRows);
+      rows.forEach(row => observer.observe(row));
+      fitRows();
+    }
+  </script>
+</section>
+<section id="publications">
+  <header>
+    <h1>Publications</h1>
+    <p class="contribution"><sup>*</sup> indicates equal contribution.</p>
+  </header>
+  <p>Please see <a class="tag" href="https://scholar.google.com/citations?user=27Xa08gAAAAJ&amp;hl=en" target="_blank">my Google Scholar page</a> for the most up-to-date publications.</p>
+  <div class="papers">
+    {% for paper in site.data.publications.papers %}
+    <article>
+      <h3>{{ paper.title }}</h3>
+      {% if paper.authors %}<div>{{ paper.authors }}</div>{% endif %}
+      <div class="links">
+        <em>{{ paper.venue }}</em>
+        {% for link in paper.links %}
+          <a href="{{ link.url | escape }}" target="_blank" rel="noopener">{{ link.label }}</a>
+        {% endfor %}
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
