@@ -1,0 +1,18 @@
+---
+layout: homepage
+---
+<article class="project-detail">
+  <a class="project-back" href="{{ '/projects.html' | relative_url }}">← Projects</a>
+  <h1>{{ page.title | escape }}</h1>
+  {% if page.hero != empty %}
+    <img class="project-hero" src="{{ page.hero | relative_url }}" alt="{{ page.hero_alt | escape }}">
+  {% else %}
+    <div class="project-hero project-placeholder" aria-hidden="true"></div>
+  {% endif %}
+  {% if page.role != empty %}<p class="project-role">Role <span>{{ page.role | escape }}</span></p>{% endif %}
+  <div class="project-content">
+    {% for block in page.blocks %}
+      {% include project-block.html block=block %}
+    {% endfor %}
+  </div>
+</article>

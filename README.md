@@ -6,7 +6,7 @@ This Jekyll site contains Home and Projects pages.
 | --- | --- |
 | Biography and Home sections | `index.html` |
 | News and publications | `_data/news.yml`, `_data/publications.yaml` |
-| Projects | `_data/projects.yaml` (entries use `title`, `subtitle`, and `url`) |
+| Projects | `_data/projects.yaml` (gallery titles, links, and thumbnail paths) |
 | Shared navigation | `_layouts/homepage.html` |
 | Typography, spacing, and responsive layout | `assets/css/site.css` |
 | Logo, portrait, and CV paths | `_data/files.yml` |
@@ -20,6 +20,45 @@ Use a repository path starting with `/assets/`. The templates apply Jekyll’s `
 ## Local preview
 
 With Jekyll installed, run `jekyll serve` from the repository root.
+
+## Project pages
+
+Each file in `projects/` contains only a title, role, hero image path, and ordered `blocks`. Project images belong in `assets/projectimages/<project-name>/`. The shared layout is `_layouts/project-detail.html`, block markup is `_includes/project-block.html`, and styling is in `assets/css/site.css`.
+
+Add blocks to a project page like this:
+
+```yaml
+role: "Research, UX design"
+hero: /assets/projectimages/everyday-resistance/hero.jpg
+hero_alt: "Project overview"
+blocks:
+  - type: image_text
+    image: /assets/projectimages/everyday-resistance/process.jpg
+    alt: "Design process"
+    text: |
+      Describe the process here.
+  - type: text
+    title: Findings
+    text: |
+      Write a full-width paragraph here.
+  - type: two_images
+    image_left: /assets/projectimages/everyday-resistance/one.jpg
+    alt_left: "First view"
+    image_right: /assets/projectimages/everyday-resistance/two.jpg
+    alt_right: "Second view"
+  - type: image_left
+    image: /assets/projectimages/everyday-resistance/left.jpg
+    alt: "Left view"
+    title: Approach
+    text: "Write beside the image."
+  - type: image_right
+    image: /assets/projectimages/everyday-resistance/right.jpg
+    alt: "Right view"
+    title: Outcome
+    text: "Write beside the image."
+```
+
+Copy, remove, or reorder blocks as needed. Use `hero` for the full-width image below the title. An empty `hero` displays a placeholder until an image is added.
 
 ## Credits
 

@@ -3,12 +3,17 @@ layout: homepage
 nav_item: projects
 title: Projects
 ---
-<section class="projects-page">
-<h1>Projects</h1>
-{% assign projects = site.data.projects.projects | where_exp: "item", "item.title != nil" %}
-{% for project in projects %}
-  <article><h2><a href="{{ project.url }}">{{ project.title }}</a></h2><p>{{ project.subtitle }}</p></article>
-{% else %}
-  <p>No projects listed yet.</p>
-{% endfor %}
+<section class="projects-page" aria-label="Projects">
+  <div class="project-grid">
+    {% for project in site.data.projects.projects %}
+    <article class="project-card">
+      <a href="{{ project.url | relative_url }}" class="project-card-link">
+        <div class="project-thumbnail">
+          {% if project.image and project.image != "" %}{% assign image_file = site.static_files | where: "path", project.image | first %}{% if image_file %}<img src="{{ project.image | relative_url }}" alt="">{% endif %}{% endif %}
+        </div>
+        <h1>{{ project.title | escape }}</h1>
+      </a>
+    </article>
+    {% endfor %}
+  </div>
 </section>

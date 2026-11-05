@@ -1,0 +1,27 @@
+{% assign block = include.block %}
+{% case block.type %}
+{% when 'image_text' %}
+<section class="project-block project-block--image-text">
+  {% if block.image and block.image != empty %}<img src="{{ block.image | relative_url }}" alt="{{ block.alt | escape }}">{% else %}<div class="project-image-placeholder" aria-hidden="true"></div>{% endif %}
+  {% if block.title and block.title != empty %}<h2>{{ block.title | escape }}</h2>{% endif %}
+  {% if block.text and block.text != empty %}<div class="project-body">{{ block.text | markdownify }}</div>{% endif %}
+</section>
+{% when 'text' %}
+<section class="project-block project-block--text">
+  {% if block.title and block.title != empty %}<h2>{{ block.title | escape }}</h2>{% endif %}
+  {% if block.text and block.text != empty %}<div class="project-body">{{ block.text | markdownify }}</div>{% endif %}
+</section>
+{% when 'two_images' %}
+<section class="project-block project-block--two-images">
+  {% if block.image_left and block.image_left != empty %}<img src="{{ block.image_left | relative_url }}" alt="{{ block.alt_left | escape }}">{% else %}<div class="project-image-placeholder" aria-hidden="true"></div>{% endif %}
+  {% if block.image_right and block.image_right != empty %}<img src="{{ block.image_right | relative_url }}" alt="{{ block.alt_right | escape }}">{% else %}<div class="project-image-placeholder" aria-hidden="true"></div>{% endif %}
+</section>
+{% when 'image_left' or 'image_right' %}
+<section class="project-block project-block--{{ block.type | replace: '_', '-' }}">
+  {% if block.image and block.image != empty %}<img src="{{ block.image | relative_url }}" alt="{{ block.alt | escape }}">{% else %}<div class="project-image-placeholder" aria-hidden="true"></div>{% endif %}
+  <div>
+    {% if block.title and block.title != empty %}<h2>{{ block.title | escape }}</h2>{% endif %}
+    {% if block.text and block.text != empty %}<div class="project-body">{{ block.text | markdownify }}</div>{% endif %}
+  </div>
+</section>
+{% endcase %}

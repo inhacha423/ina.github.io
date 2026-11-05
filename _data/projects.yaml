@@ -1,1 +1,22 @@
-projects: []
+projects:
+  - title: "Everyday Resistance"
+    url: /projects/everyday-resistance.html
+    image: /assets/projectimages/everyday-resistance/thumbnail.png
+  - title: "Why PhD is SO Hard"
+    url: /projects/why-phd-is-so-hard.html
+    image: /assets/projectimages/why-phd-is-so-hard/thumbnail.png
+  - title: "Upstage"
+    url: /projects/upstage.html
+    image: /assets/projectimages/upstage/thumbnail.png
+  - title: "Reuse-it"
+    url: /projects/reuse-it.html
+    image: /assets/projectimages/reuse-it/thumbnail.png
+  - title: "Naver Labs"
+    url: /projects/naver-labs.html
+    image: /assets/projectimages/naver-labs/thumbnail.png
+  - title: "Rullen Bandet"
+    url: /projects/rullen-bandet.html
+    image: /assets/projectimages/rullen-bandet/thumbnail.png
+  - title: "Shadia 2017"
+    url: /projects/shadia-2017.html
+    image: /assets/projectimages/shadia-2017/thumbnail.png
