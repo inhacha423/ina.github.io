@@ -2,6 +2,8 @@
 
 This Jekyll site contains Home, Projects, and CV pages.
 
+All pages use the Dusty Rose + Warm Paper background in `assets/css/site.css`. The previous Muted Coral + Aged Paper and Faded Lilac + Blush backgrounds are preserved in `assets/css/saved-palettes.css`. That file is not loaded by the site; load it after the page stylesheet to restore those page-specific backgrounds.
+
 | To edit | File |
 | --- | --- |
 | Biography and Home sections | `index.html` |

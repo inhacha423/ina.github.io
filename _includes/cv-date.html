@@ -1,0 +1,6 @@
+{%- assign date_parts = include.date | split: ' – ' -%}
+{%- if date_parts.size == 2 -%}
+<span class="cv-date-part">{{ date_parts[0] | escape }} –</span> <span class="cv-date-part">{{ date_parts[1] | escape }}</span>
+{%- else -%}
+{{ include.date | escape }}
+{%- endif -%}

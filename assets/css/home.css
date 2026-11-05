@@ -111,9 +111,7 @@
 .paper-venue a,
 .paper-venue span {
   color: inherit;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: .2em;
+  text-decoration: none;
 }
 
 .paper-actions {

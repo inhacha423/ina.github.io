@@ -24,7 +24,7 @@ title: CV
       <h2 id="cv-{{ section_key | replace: '_', '-' }}">{{ section.title | escape }}</h2>
       {% for entry in entries %}
         <div class="cv-entry">
-          <span class="cv-date">{{ entry.date | escape }}</span>
+          <span class="cv-date">{% include cv-date.html date=entry.date %}</span>
           <div>
             <strong class="cv-organization">{{ entry.organization | escape }}</strong>{% if entry.location %}<span>, {{ entry.location | escape }}</span>{% endif %}
             {% if entry.detail %}<p class="cv-detail">{% if section_key == 'invited_talks' %}“{{ entry.detail | escape }}”{% else %}{{ entry.detail | escape }}{% endif %}</p>{% endif %}
@@ -62,7 +62,7 @@ title: CV
         </div>
         {% for entry in group.entries %}
           <div class="cv-entry">
-            <span class="cv-date">{{ entry.date | escape }}</span>
+            <span class="cv-date">{% include cv-date.html date=entry.date %}</span>
             <div>{{ entry.organization | escape }}</div>
           </div>
         {% endfor %}

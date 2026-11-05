@@ -2,10 +2,8 @@
 section_order:
 - key: education
   title: Education
-- key: research_experience
-  title: Research Experience
-- key: professional_experience
-  title: Professional Experience
+- key: employment
+  title: Employment
 - key: grants
   title: Grants
 - key: teaching
@@ -37,11 +35,10 @@ education:
   location: Seoul, Republic of Korea
   detail: B.A. in Aesthetics and B.A. in Information Science and Culture
   note: Graduated Cum Laude
-research_experience:
+employment:
 - date: Aug 2026 – Dec 2026
   organization: Toyota Research Institute
   detail: Research Intern, Human-centric AI, Harmonious Communities
-professional_experience:
 - date: Nov 2021 – Jul 2023
   organization: Upstage
   detail: AI Product UX Designer

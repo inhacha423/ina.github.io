@@ -1,0 +1,28 @@
+/* Saved alternatives. Not loaded by the site.
+   To restore, load this file after the page stylesheet.
+   The selectors apply the original palette to Projects and CV respectively. */
+
+/* Muted Coral + Aged Paper for the projects gallery and detail pages. */
+:root.projects-theme {
+  background-color: #f3ede7;
+  background-repeat: no-repeat, repeat, no-repeat, no-repeat, no-repeat;
+  background-size: 100% 100%, 160px 160px, 100% 760px, 100% 760px, 100% 100%;
+  background-image:
+    linear-gradient(to bottom, transparent 220px, #f3ede7 760px),
+    url("../images/grain.svg"),
+    radial-gradient(ellipse at 87% 8%, rgba(214, 169, 159, .7), transparent 55%),
+    radial-gradient(ellipse at 13% 25%, rgba(222, 213, 210, .85), transparent 52%),
+    linear-gradient(115deg, #ded5d2 0%, #e9d9ca 40%, #f3ede7 72%, #d6a99f 100%);
+}
+
+/* Faded Lilac + Blush for the CV page. */
+:root.cv-theme {
+  background-color: #f5edec;
+  background-repeat: no-repeat, repeat, no-repeat, no-repeat;
+  background-size: 100% 100%, 160px 160px, 100% 560px, 100% 100%;
+  background-image:
+    linear-gradient(to bottom, transparent 84px, #f5edec 560px),
+    url("../images/grain.svg"),
+    linear-gradient(110deg, #dcd9e7 0%, #e7dfe5 38%, #f5edec 68%, #e5bcbd 100%),
+    linear-gradient(#f5edec, #f5edec);
+}
