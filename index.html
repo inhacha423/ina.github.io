@@ -41,19 +41,28 @@ nav_item: home
     <h1>Publications</h1>
     <p class="contribution"><sup>*</sup> indicates equal contribution.</p>
   </header>
-  <p>Please see <a class="tag" href="https://scholar.google.com/citations?user=27Xa08gAAAAJ&amp;hl=en" target="_blank">my Google Scholar page</a> for the most up-to-date publications.</p>
+  <p class="publication-note">Please see <a class="tag" href="https://scholar.google.com/citations?user=27Xa08gAAAAJ&amp;hl=en" target="_blank">my Google Scholar page</a> for the most up-to-date publications.</p>
   <div class="papers">
     {% for paper in site.data.publications.papers %}
     <article>
       {% assign pdf_link = paper.links | where: "label", "pdf" | first %}
+      {% assign bibtex_link = paper.links | where: "label", "bibtex" | first %}
       <h3>{% if pdf_link %}<a href="{{ pdf_link.url | escape }}" target="_blank" rel="noopener">{{ paper.title | escape }}</a>{% else %}{{ paper.title | escape }}{% endif %}</h3>
-      {% if paper.authors %}<div>{{ paper.authors }}</div>{% endif %}
-      <div class="links">
-        <em>{{ paper.venue }}</em>
-        {% for link in paper.links %}
-          <a href="{{ link.url | escape }}" target="_blank" rel="noopener">{{ link.label }}</a>
-        {% endfor %}
-      </div>
+      {% if paper.authors %}<p class="paper-authors">{{ paper.authors }}</p>{% endif %}
+      <p class="paper-venue">
+        {% if paper.venue_short %}
+          {% if paper.venue_url %}<a href="{{ paper.venue_url | escape }}" target="_blank" rel="noopener">{{ paper.venue_short | escape }}</a>{% else %}<span>{{ paper.venue_short | escape }}</span>{% endif %}
+        {% else %}{{ paper.venue | escape }}{% endif %}
+      </p>
+      {% unless paper.links == empty %}
+        <div class="paper-actions">
+          {% if pdf_link %}<a href="{{ pdf_link.url | escape }}" target="_blank" rel="noopener">PDF</a>{% endif %}
+          {% if bibtex_link %}<a href="{{ bibtex_link.url | escape }}" target="_blank" rel="noopener">BibTeX</a>{% elsif pdf_link %}<span class="paper-action--pending" aria-disabled="true" title="BibTeX coming soon">BibTeX</span>{% endif %}
+          {% for link in paper.links %}
+            {% if link.label != 'pdf' and link.label != 'bibtex' %}<a href="{{ link.url | escape }}" target="_blank" rel="noopener">{% if link.label == 'resource' %}Resource{% else %}{{ link.label | escape }}{% endif %}</a>{% endif %}
+          {% endfor %}
+        </div>
+      {% endunless %}
     </article>
     {% endfor %}
   </div>

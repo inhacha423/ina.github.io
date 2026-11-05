@@ -27,6 +27,9 @@ With Jekyll installed, run `jekyll serve` from the repository root. The shared l
 
 Edit entries and the order of the dated sections in `_data/cv.yml`. The `section_order` list controls their headings and order. Publications are shared with Home through `_data/publications.yaml`, and Academic Services appears below them in `cv/index.html`.
 
+For a publication, `venue` is the full CV label. `venue_short` is the abbreviated Home label, and optional `venue_url` makes that abbreviation clickable.
+Add a `links` item with `label: bibtex` and a `url` to activate the BibTeX button beside PDF. Until then, it appears as a disabled placeholder.
+
 ## Project pages
 
 Each file in `projects/` starts with a title, role, and hero image path. Until you add project-specific `blocks`, it displays the examples in `_data/project_template.yml`. To replace the examples, add a `blocks` list to that project's file. Project images belong in `assets/projectimages/<project-name>/`. The shared layout is `_layouts/project-detail.html`, block markup is `_includes/project-block.html`, and styling is in `assets/css/projects.css`.
