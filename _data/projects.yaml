@@ -2,21 +2,31 @@ projects:
   - title: "Everyday Resistance"
     url: /projects/everyday-resistance.html
     image: /assets/projectimages/everyday-resistance/thumbnail.png
+    image_position: center center
   - title: "Why PhD is SO Hard"
     url: /projects/why-phd-is-so-hard.html
     image: /assets/projectimages/why-phd-is-so-hard/thumbnail.png
+    image_position: center center
   - title: "Upstage"
     url: /projects/upstage.html
     image: /assets/projectimages/upstage/thumbnail.png
+    image_position: center center
   - title: "Reuse-it"
     url: /projects/reuse-it.html
-    image: /assets/projectimages/reuse-it/thumbnail.png
+    image: /assets/projectimages/reuse-it/thumbnail-product.png
+    image_position: center center
   - title: "Naver Labs"
     url: /projects/naver-labs.html
-    image: /assets/projectimages/naver-labs/thumbnail.png
+    image: /assets/projectimages/naver-labs/thumbnail-logo.png
+    image_position: center center
+    image_style: logo
   - title: "Rullen Bandet"
     url: /projects/rullen-bandet.html
-    image: /assets/projectimages/rullen-bandet/thumbnail.png
+    image: /assets/projectimages/rullen-bandet/hero.png
+    image_position: left center
+    image_scale: 1.13
   - title: "Shadia 2017"
     url: /projects/shadia-2017.html
-    image: /assets/projectimages/shadia-2017/thumbnail.png
+    image: /assets/projectimages/shadia-2017/hero.png
+    image_position: left center
+    image_scale: 1.11

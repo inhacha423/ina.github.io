@@ -1,0 +1,18 @@
+{% if page.hero_pdf %}
+  <div class="project-hero-pdf">{% include project-block.html block=page.hero_pdf %}</div>
+{% elsif page.hero_video %}
+  <div class="project-hero-video">{% include project-block.html block=page.hero_video loading='eager' %}</div>
+{% elsif page.hero and page.hero != empty %}
+  <figure class="project-hero-figure">
+    {% if page.hero_crop %}
+      {% assign crop_width = page.hero_width | minus: page.hero_crop.left | minus: page.hero_crop.right %}
+      {% assign crop_height = page.hero_height | minus: page.hero_crop.top | minus: page.hero_crop.bottom %}
+      <div class="project-hero-crop" style="aspect-ratio: {{ crop_width }} / {{ crop_height }};">
+    {% endif %}
+    <img class="project-hero{% if page.hero_crop %} project-hero--cropped{% endif %}" src="{{ page.hero | relative_url }}" alt="{{ page.hero_alt | escape }}"{% if page.hero_width and page.hero_height %} width="{{ page.hero_width }}" height="{{ page.hero_height }}"{% endif %}{% if page.hero_crop %} style="width: {{ page.hero_width | times: 100.0 | divided_by: crop_width }}%; left: {{ page.hero_crop.left | times: -100.0 | divided_by: crop_width }}%; top: {{ page.hero_crop.top | times: -100.0 | divided_by: crop_height }}%;"{% endif %}>
+    {% if page.hero_crop %}</div>{% endif %}
+    {% if page.hero_caption %}<figcaption class="project-caption">{{ page.hero_caption | escape }}</figcaption>{% endif %}
+  </figure>
+{% elsif page.hide_hero != true %}
+  <div class="project-hero project-placeholder" aria-hidden="true"></div>
+{% endif %}

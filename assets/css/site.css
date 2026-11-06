@@ -2,6 +2,7 @@
   --color-text: #29272A;
   --color-text-secondary: #57515b;
   --color-text-muted: #6c666c;
+  --color-caption: #787178;
   --color-accent: #643a85;
   --color-home-heading: #53605e;
   --color-cv-heading: #4e4852;
@@ -146,4 +147,13 @@ h1, h2, h3 {
   font-family: var(--font-display);
   font-weight: 500;
   letter-spacing: -.025em;
+}
+
+/* Vector link arrows keep the same appearance on iOS and desktop. */
+.link-arrow {
+  display: inline-block;
+  width: .85em;
+  height: .85em;
+  vertical-align: -.05em;
+  flex-shrink: 0;
 }

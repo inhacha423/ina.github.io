@@ -11,12 +11,44 @@ All pages use the Dusty Rose + Warm Paper background in `assets/css/site.css`. T
 | Biography and Home sections | `index.html` |
 | News, publications, and contact links | `_data/news.yml`, `_data/publications.yaml`, `_data/contact.yml` |
 | Projects | `_data/projects.yaml` (gallery titles, links, and thumbnail paths) |
+| New project starter | `_templates/project.html` (copy into `projects/`) |
+| Shared project header and blocks | `_includes/project-header.html`, `_includes/project-block.html` |
 | Shared navigation | `_layouts/homepage.html` |
 | Shared fonts, colors, and navigation | `assets/css/site.css` |
 | Home, Projects, and CV styles | `assets/css/home.css`, `assets/css/projects.css`, `assets/css/cv.css` |
 | Logo, portrait, and PDF download paths | `_data/files.yml` |
 | CV section order and entries | `_data/cv.yml` (publications come from `_data/publications.yaml`) |
 
+
+## File structure
+
+```text
+_templates/
+  project.html              # Copy to start a new project page
+_layouts/
+  homepage.html             # Shared page shell and navigation
+  project-detail.html       # Header → hero image/video → content → note
+_includes/
+  project-header.html       # Title, subtitle, credit, and Role
+  project-hero.html         # Hero image, video, or PDF
+  link-arrow.html           # Shared SVG arrows (external, down, left)
+  project-block.html        # Image, video, and text blocks
+  cv-date.html              # CV date-range formatting
+_data/                      # Projects, publications, CV, news, and file paths
+projects/
+  upstage.html              # Each project's content and metadata
+  reuse-it.html
+  ...
+assets/
+  css/                      # Shared tokens and page styles
+  projectimages/            # One image folder per project
+  images/                   # Shared logo and portrait
+  documents/                # Downloadable documents
+index.html                  # Home
+cv/index.html               # CV
+projects.html               # Project gallery
+design-system.html          # Design reference
+```
 
 ## Updating uploaded files
 
@@ -37,15 +69,38 @@ Add a `links` item with `label: bibtex` and a `url` to activate the BibTeX butto
 
 ## Project pages
 
+For a new project, copy `_templates/project.html` into `projects/<project-name>.html`, then add its gallery entry to `_data/projects.yaml`. Every detail page uses `_includes/project-header.html` for the same heading order: `title` → `subtitle` → `role` → hero image or video. Empty subtitles and roles are hidden without reserving blank space.
+
+Header styling is shared in `assets/css/projects.css`: title 32–44px, subtitle 16px, Role label 12px and value 13px. Title-to-subtitle spacing is 16px, subtitle-to-Role spacing is 6px, and the header-to-hero gap is 24px.
+
+All project detail pages and the starter template use the shared `.project-body` style: Inter 17px / weight 300 / line-height 1.6, with .8em between paragraphs. This applies to text-only, image-with-text, and video-with-text blocks. Change this style once in `assets/css/projects.css` to update every project; no per-page font settings are needed.
+
+Set `subtitle_url` to turn the subtitle into an external link. The template adds the SVG arrow automatically; keep the subtitle text free of arrow characters. Use optional `credit` for a team or project credit below it; leave `role` empty when no role label is needed.
+
+To crop a hero without changing the original image file, set `hero_width`, `hero_height`, and `hero_crop: {top: 4, right: 80, bottom: 4, left: 80}`. Crop values are pixels in the original image, and the same crop scales to every viewport.
+
+Reuse-it, Rullen Bandet, Naver Labs, and Shadia 2017 use images migrated from the old portfolio. See [PROJECT_ASSETS.md](PROJECT_ASSETS.md) for the original-to-current filename mapping. Their blocks are configured directly in each project page.
+
 Each file in `projects/` starts with a title, role, and hero image path. Until you add project-specific `blocks`, it displays the examples in `_data/project_template.yml`. To replace the examples, add a `blocks` list to that project's file. Project images belong in `assets/projectimages/<project-name>/`. The shared layout is `_layouts/project-detail.html`, block markup is `_includes/project-block.html`, and styling is in `assets/css/projects.css`.
 
+Gallery crop settings live in `_data/projects.yaml`: `image_position` sets the focal point (for example `left center` or `14% center`), and optional `image_scale` makes a small fixed zoom from the left edge. These only affect gallery thumbnails; source files and detail images retain their original composition. Gallery titles are left-aligned.
+For a logo thumbnail, set `image_style: logo` to use a white background, 24px padding, and an uncropped image.
+
 Add blocks to a project page like this:
+
+Optional front-matter fields: `subtitle` adds supporting text under the title, `hero_caption` adds a small caption below the hero image, `content_width: reading` limits full-width text blocks to 68ch, and `note` adds a smaller italic note after the content. The gallery title remains separately editable in `_data/projects.yaml`.
 
 ```yaml
 role: "Research, UX design"
 hero: /assets/projectimages/everyday-resistance/hero.jpg
 hero_alt: "Project overview"
 blocks:
+  - type: image
+    image: /assets/projectimages/reuse-it/detail-01.png
+    alt: "Describe the image"
+    # caption: "Location or image description"
+    # width: 2512  # Optional original dimensions reserve space while loading
+    # height: 1194
   - type: image_text
     image: /assets/projectimages/everyday-resistance/process.jpg
     alt: "Design process"
@@ -73,6 +128,60 @@ blocks:
 ```
 
 Copy, remove, or reorder blocks as needed. Use `hero` for the full-width image below the title. An empty `hero` displays a placeholder until an image is added.
+
+For a `two_images` block, add `gap: none` to remove the gap between the images. Optional `width_left`, `height_left`, `width_right`, and `height_right` reserve each image's original proportions while loading. These pairs stack vertically on screens 700px wide or narrower.
+
+### YouTube and Vimeo
+
+Add a `video` block to a project's `blocks` list. Use the video's ID, not its full watch URL. Both players use a responsive 16:9 frame, lazy loading, playback controls, and fullscreen support. They do not autoplay. The video's hosting settings must allow embedding.
+
+```yaml
+  - type: video
+    provider: youtube
+    video_id: "YOUR_YOUTUBE_ID"
+    video_title: "Project demonstration"
+    # title: Demo          # Optional heading
+    # text: "Description"  # Optional paragraph below the video
+
+  - type: video
+    provider: vimeo
+    video_id: "YOUR_VIMEO_ID"
+    video_title: "Project walkthrough"
+```
+
+For YouTube, copy the ID after `watch?v=` or `youtu.be/`. For Vimeo, copy the numeric video ID. `video_title` is the accessible name of the player. Empty IDs or unsupported providers do not render a player.
+
+To replace a project's top hero image with a video, add `hero_video` to its front matter (outside `blocks`):
+
+```yaml
+hero_video:
+  type: video
+  provider: vimeo
+  video_id: "345037607"
+  video_title: "Reuse-it project video"
+```
+
+`hero_video` takes precedence over `hero`. The hero video loads immediately; videos inside content blocks load lazily.
+
+Provider references: [YouTube embedded players](https://developers.google.com/youtube/player_parameters), [Vimeo player parameters](https://help.vimeo.com/hc/en-us/articles/12426260232977-About-Player-Parameters).
+
+### PDF reader
+
+Save project PDFs in `assets/documents/<project-name>/`. To show a PDF reader below the project header, use:
+
+```yaml
+hero_pdf:
+  type: pdf
+  file: /assets/documents/why-phd-is-so-hard/zine.pdf
+  pdf_title: "Why PhD is SO Hard zine"
+blocks: []
+```
+
+The same `type: pdf` block can be placed inside `blocks`. It uses the browser's built-in PDF viewer, so controls and mobile support depend on the browser. Open and download links are always shown outside the viewer. `hero_pdf` takes precedence over image/video heroes; `blocks: []` suppresses sample content.
+
+Why PhD is SO Hard shows PNG exports of each PDF page in `assets/projectimages/why-phd-is-so-hard/pages/` after a PDF reader block. The page order is listed explicitly in its project HTML. `hide_hero: true` omits the empty hero placeholder so the PDF reader follows the header directly. Each PNG preserves the full PDF page or spread, with a longest edge of 2000px. The source PDF is unchanged; regenerate the PNGs when replacing it.
+
+Image blocks accept an optional `caption`, using the same centered, muted `.project-caption` style as `hero_caption`. Link arrows are rendered by `_includes/link-arrow.html` to keep their appearance consistent on mobile and desktop.
 
 ## Credits
 

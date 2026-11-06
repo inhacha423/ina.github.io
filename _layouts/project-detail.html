@@ -1,15 +1,10 @@
 ---
 layout: homepage
 ---
-<article class="project-detail">
-  <a class="project-back" href="{{ '/projects.html' | relative_url }}">← Projects</a>
-  <h1>{{ page.title | escape }}</h1>
-  {% if page.hero != empty %}
-    <img class="project-hero" src="{{ page.hero | relative_url }}" alt="{{ page.hero_alt | escape }}">
-  {% else %}
-    <div class="project-hero project-placeholder" aria-hidden="true"></div>
-  {% endif %}
-  {% if page.role != empty %}<p class="project-role">Role <span>{{ page.role | escape }}</span></p>{% endif %}
+<article class="project-detail{% if page.content_width == 'reading' %} project-detail--reading{% endif %}">
+  <a class="project-back" href="{{ '/projects.html' | relative_url }}">{% include link-arrow.html direction='left' %} Projects</a>
+  {% include project-header.html %}
+  {% include project-hero.html %}
   <div class="project-content">
     {% if page.blocks %}
       {% assign project_blocks = page.blocks %}
@@ -20,4 +15,5 @@ layout: homepage
       {% include project-block.html block=block %}
     {% endfor %}
   </div>
+  {% if page.note %}<p class="project-note">{{ page.note | escape }}</p>{% endif %}
 </article>

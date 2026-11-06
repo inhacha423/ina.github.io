@@ -1,0 +1,12 @@
+{% assign project_subtitle = page.subtitle | default: '' | strip %}
+{% assign project_role = page.role | default: '' | strip %}
+<header class="project-header">
+  <h1>{{ page.title | escape }}</h1>
+  {% if project_subtitle != empty %}
+    <p class="project-subtitle">{% if page.subtitle_url %}<a href="{{ page.subtitle_url | escape }}" target="_blank" rel="noopener">{{ project_subtitle | strip | escape }} {% include link-arrow.html %}</a>{% else %}{{ project_subtitle | escape }}{% endif %}</p>
+  {% endif %}
+  {% if page.credit %}<p class="project-credit">{{ page.credit | escape }}</p>{% endif %}
+  {% if project_role != empty %}
+    <p class="project-role"><span class="project-role-label">Role</span><span class="project-role-value">{{ project_role | escape }}</span></p>
+  {% endif %}
+</header>

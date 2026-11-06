@@ -1,4 +1,9 @@
 blocks:
+  # To add a video, copy this block into a project's blocks list:
+  # - type: video
+  #   provider: youtube  # or vimeo
+  #   video_id: "YOUR_VIDEO_ID"
+  #   video_title: "Project demonstration"
   - type: image_text
     image: ""
     alt: ""

@@ -1,5 +1,39 @@
 {% assign block = include.block %}
 {% case block.type %}
+{% when 'pdf' %}
+  {% if block.file and block.file != empty %}
+    {% assign pdf_url = block.file | relative_url %}
+<section class="project-block project-block--pdf">
+  {% if block.title and block.title != empty %}<h2>{{ block.title | escape }}</h2>{% endif %}
+  <div class="project-pdf-actions">
+    <a href="{{ pdf_url }}" target="_blank" rel="noopener">Open PDF {% include link-arrow.html %}</a>
+    <a href="{{ pdf_url }}" download>Download PDF {% include link-arrow.html direction='down' %}</a>
+  </div>
+  <iframe class="project-pdf" src="{{ pdf_url }}#view=FitH" title="{{ block.pdf_title | default: block.title | default: page.title | escape }}" loading="lazy"></iframe>
+</section>
+  {% endif %}
+{% when 'image' %}
+<figure class="project-block project-block--image">
+  <img src="{{ block.image | relative_url }}" alt="{{ block.alt | escape }}"{% if block.width and block.height %} width="{{ block.width }}" height="{{ block.height }}"{% endif %} loading="{{ block.loading | default: 'lazy' }}" decoding="async">
+  {% if block.caption and block.caption != empty %}<figcaption class="project-caption">{{ block.caption | escape }}</figcaption>{% endif %}
+</figure>
+{% when 'video' %}
+  {% assign embed_url = '' %}
+  {% if block.video_id and block.video_id != empty %}
+    {% assign video_id = block.video_id | url_encode %}
+    {% if block.provider == 'youtube' %}
+      {% assign embed_url = 'https://www.youtube.com/embed/' | append: video_id | append: '?playsinline=1' %}
+    {% elsif block.provider == 'vimeo' %}
+      {% assign embed_url = 'https://player.vimeo.com/video/' | append: video_id | append: '?dnt=1' %}
+    {% endif %}
+  {% endif %}
+  {% if embed_url != empty %}
+<section class="project-block project-block--video">
+  {% if block.title and block.title != empty %}<h2>{{ block.title | escape }}</h2>{% endif %}
+  <iframe class="project-video" src="{{ embed_url | escape }}" title="{{ block.video_title | default: block.title | default: page.title | escape }}" loading="{{ include.loading | default: 'lazy' }}" referrerpolicy="strict-origin-when-cross-origin" allow="encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe>
+  {% if block.text and block.text != empty %}<div class="project-body">{{ block.text | markdownify }}</div>{% endif %}
+</section>
+  {% endif %}
 {% when 'image_text' %}
 <section class="project-block project-block--image-text">
   {% if block.image and block.image != empty %}<img src="{{ block.image | relative_url }}" alt="{{ block.alt | escape }}">{% else %}<div class="project-image-placeholder" aria-hidden="true"></div>{% endif %}
@@ -12,9 +46,9 @@
   {% if block.text and block.text != empty %}<div class="project-body">{{ block.text | markdownify }}</div>{% endif %}
 </section>
 {% when 'two_images' %}
-<section class="project-block project-block--two-images">
-  {% if block.image_left and block.image_left != empty %}<img src="{{ block.image_left | relative_url }}" alt="{{ block.alt_left | escape }}">{% else %}<div class="project-image-placeholder" aria-hidden="true"></div>{% endif %}
-  {% if block.image_right and block.image_right != empty %}<img src="{{ block.image_right | relative_url }}" alt="{{ block.alt_right | escape }}">{% else %}<div class="project-image-placeholder" aria-hidden="true"></div>{% endif %}
+<section class="project-block project-block--two-images{% if block.gap == 'none' %} project-block--no-gap{% endif %}">
+  {% if block.image_left and block.image_left != empty %}<img src="{{ block.image_left | relative_url }}" alt="{{ block.alt_left | escape }}"{% if block.width_left and block.height_left %} width="{{ block.width_left }}" height="{{ block.height_left }}"{% endif %} loading="lazy" decoding="async">{% else %}<div class="project-image-placeholder" aria-hidden="true"></div>{% endif %}
+  {% if block.image_right and block.image_right != empty %}<img src="{{ block.image_right | relative_url }}" alt="{{ block.alt_right | escape }}"{% if block.width_right and block.height_right %} width="{{ block.width_right }}" height="{{ block.height_right }}"{% endif %} loading="lazy" decoding="async">{% else %}<div class="project-image-placeholder" aria-hidden="true"></div>{% endif %}
 </section>
 {% when 'image_left' or 'image_right' %}
 <section class="project-block project-block--{{ block.type | replace: '_', '-' }}">

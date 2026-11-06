@@ -26,6 +26,7 @@
 | 주요 글자 | `--color-text` | `#29272A` |
 | 직책·학회·보조 본문 | `--color-text-secondary` | `#57515B` |
 | 날짜·안내 | `--color-text-muted` | `#6C666C` |
+| 이미지 캡션 | `--color-caption` | `#787178` |
 | 링크·포커스 | `--color-accent` | `#643A85` |
 | Home 섹션 제목 | `--color-home-heading` | `#53605E` |
 | CV 섹션 제목 | `--color-cv-heading` | `#4E4852` |
@@ -42,7 +43,7 @@
 
 ## Typography
 
-**Instrument Sans**는 모든 페이지·섹션·논문 제목과 내비게이션·버튼에 사용한다. **Inter**는 Biography·프로젝트 본문·CV 내용·저자·날짜에 사용한다. 읽는 본문은 모두 400이다. 페이지 제목과 UI는 500, 섹션 제목과 본인 저자명은 600, 논문 제목은 400으로 구분한다.
+**Instrument Sans**는 모든 페이지·섹션·논문 제목과 내비게이션·버튼에 사용한다. **Inter**는 Biography·프로젝트 본문·CV 내용·저자·날짜에 사용한다. 기본 본문은 400, 프로젝트 상세 본문은 300이다. 페이지 제목과 UI는 500, 섹션 제목과 본인 저자명은 600, 논문 제목은 400으로 구분한다.
 
 | 토큰 | 크기 | 대표 용도 |
 | --- | --- | --- |
@@ -55,13 +56,13 @@
 | `--type-small` | 13px / .8125rem | 내비게이션·프로젝트 Role |
 | `--type-caption` | 12px / .75rem | 버튼·기여도 설명 |
 
-버튼과 기여도 설명은 12px이다. 프로젝트 페이지 제목은 `clamp(2rem, 5vw, 3.5rem)`으로 32–56px 사이에서 변한다. 일반 제목의 자간은 −.025em, 긴 본문은 −.01em, Home·CV 섹션명은 모두 Instrument Sans 14px / 600 / 행간 1.4 / 자간 .065em을 사용한다. CV 논문 제목은 같은 서체의 16px / 400이다.
+버튼과 기여도 설명은 12px이다. 프로젝트 페이지 제목은 `clamp(2rem, 4vw, 2.75rem)`으로 32–44px 사이에서 변한다. 일반 제목의 자간은 −.025em, 긴 본문은 −.01em, Home·CV 섹션명은 모두 Instrument Sans 14px / 600 / 행간 1.4 / 자간 .065em을 사용한다. CV 논문 제목은 같은 서체의 16px / 400이다.
 
 ## Layout and components
 
 - 공통 프레임은 최대 1160px. 좌우 여백은 `clamp(24px, 7vw, 84px)`.
 - 읽는 본문의 기본 최대 너비는 68ch. CV는 860px, 프로젝트 목록은 820px, 상세는 800px.
-- 프로젝트 목록은 2열, 열 사이 16px, 행 사이 12px. 620px 이하에서는 1열.
+- 프로젝트 목록은 2열, 열 사이 24px, 행 사이 28px. 이미지와 제목 사이는 10px. 620px 이하에서는 1열이며 행 간격은 유지한다.
 - 프로젝트 블록 사이 32px, 나란한 이미지 사이 6px.
 - CV 날짜 열은 오른쪽, 내용 열은 왼쪽 정렬. 날짜 열 136px, 간격 24px. 600px 이하에서는 104px와 16px.
 - CV 섹션 제목은 본문 열 위. Research Interests는 페이지 왼쪽에 정렬한다.
@@ -71,3 +72,5 @@
 - BibTeX 데이터가 없으면 비활성 표시. 활성 링크는 키보드 포커스와 원래 링크 동작을 유지한다.
 
 기본 간격은 4 / 8 / 12 / 16 / 24 / 32 / 44px를 중심으로 조합한다. 반응형에서 긴 날짜는 월과 연도를 묶은 상태로 시작일과 종료일 사이에서 줄바꿈한다.
+
+Project header: title 32–44px / 500 / 1.15, subtitle Inter 16px / 400 / 1.5, Role label 12px and value 13px in Instrument Sans. Subtitle and Role are grouped with the title, followed by 24px before the hero.
