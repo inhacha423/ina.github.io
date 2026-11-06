@@ -181,7 +181,7 @@ The same `type: pdf` block can be placed inside `blocks`. It uses the browser's 
 
 Why PhD is SO Hard shows PNG exports of each PDF page in `assets/projectimages/why-phd-is-so-hard/pages/` after a PDF reader block. The page order is listed explicitly in its project HTML. `hide_hero: true` omits the empty hero placeholder so the PDF reader follows the header directly. Each PNG preserves the full PDF page or spread, with a longest edge of 2000px. The source PDF is unchanged; regenerate the PNGs when replacing it.
 
-Image blocks accept an optional `caption`, using the same centered, muted `.project-caption` style as `hero_caption`. Link arrows are rendered by `_includes/link-arrow.html` to keep their appearance consistent on mobile and desktop.
+Image blocks accept an optional `caption`, using the same centered, muted `.project-caption` style as `hero_caption`. Link arrows are rendered by `_includes/link-arrow.html` with explicit em-based dimensions to keep their appearance consistent even before CSS loads. Local stylesheet URLs include a build version so browsers refresh cached styles after deployment.
 
 ## Credits
 

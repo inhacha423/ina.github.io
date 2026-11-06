@@ -5,14 +5,15 @@
   <meta name="color-scheme" content="only light">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&amp;family=Inter:wght@300;400;500;600&amp;display=swap">
+  {% assign asset_version = site.time | date: '%s' %}
   <title>{{ page.title | default: "Research portfolio" }}</title>
-  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}?v={{ asset_version }}">
   {% for stylesheet in page.stylesheets %}
     {% assign stylesheet_url = '/assets/css/' | append: stylesheet | append: '.css' %}
-    <link rel="stylesheet" href="{{ stylesheet_url | relative_url }}">
+    <link rel="stylesheet" href="{{ stylesheet_url | relative_url }}?v={{ asset_version }}">
   {% endfor %}
   {% assign page_css = '/assets/css/' | append: page.nav_item | append: '.css' %}
-  <link rel="stylesheet" href="{{ page_css | relative_url }}">
+  <link rel="stylesheet" href="{{ page_css | relative_url }}?v={{ asset_version }}">
 </head>
 <body>
   <nav aria-label="Main navigation">
