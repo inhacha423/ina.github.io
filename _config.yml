@@ -3,3 +3,4 @@ exclude:
   - DESIGN_SYSTEM.md
   - PROJECT_ASSETS.md
   - _templates
+  - scripts

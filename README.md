@@ -188,3 +188,11 @@ Image blocks accept an optional `caption`, using the same centered, muted `.proj
 The HTML CV layout adapts the dated-entry structure from [Donghoon Shin’s CV theme](https://github.com/donghoon-io/donghoon-io.github.io).
 
 Forked from [Jungsoo Park’s website](https://github.com/JJumSSu/JJumSSu.github.io), based on Martin Saveski’s template. The news layout was inspired by [Donghoon Shin’s website theme](https://github.com/donghoon-io/donghoon-io.github.io).
+
+### Responsive project photographs
+
+Everyday Resistance preserves original JPEGs and serves WebP copies from its `optimized/` folder at 800, 1200, and 1600px widths. Image blocks accept a `sources` list of `image` paths and numeric `width` values plus a `sizes` string. The shared image block builds `srcset` with deployment-aware URLs. Keep `image` as the largest fallback and specify its `width` and `height` to reserve space.
+
+To regenerate variants after replacing a source, run `python3 scripts/optimize-project-images.py path/to/photo.jpg` with Pillow installed. The script respects EXIF orientation, preserves embedded color profiles, and leaves originals unchanged. It generates WebP at quality 88 and removes unnecessary photo metadata. Existing blocks without `sources` continue to use a single image.
+
+Google Drive videos also use the shared `video` block: set `provider: google_drive` and `video_id` to the file ID between `/d/` and `/view` in its sharing URL. The block embeds Drive's `/preview` player. The owner must allow visitors to view the file in Drive's sharing settings.
