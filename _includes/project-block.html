@@ -1,10 +1,13 @@
 {% assign block = include.block %}
+{% capture block_heading -%}
+  {% if block.title and block.title != empty %}<h2>{{ block.title | escape }}</h2>{% endif %}
+{%- endcapture %}
 {% case block.type %}
 {% when 'pdf' %}
   {% if block.file and block.file != empty %}
     {% assign pdf_url = block.file | relative_url %}
 <section class="project-block project-block--pdf">
-  {% if block.title and block.title != empty %}<h2>{{ block.title | escape }}</h2>{% endif %}
+  {{ block_heading }}
   <div class="project-pdf-actions">
     <a href="{{ pdf_url }}" target="_blank" rel="noopener">Open PDF {% include link-arrow.html %}</a>
     <a href="{{ pdf_url }}" download>Download PDF {% include link-arrow.html direction='down' %}</a>
@@ -31,33 +34,28 @@
   {% endif %}
   {% if embed_url != empty %}
 <section class="project-block project-block--video">
-  {% if block.title and block.title != empty %}<h2>{{ block.title | escape }}</h2>{% endif %}
+  {{ block_heading }}
   <iframe class="project-video" src="{{ embed_url | escape }}" title="{{ block.video_title | default: block.title | default: page.title | escape }}" loading="{{ include.loading | default: 'lazy' }}" referrerpolicy="strict-origin-when-cross-origin" allow="encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe>
   {% if block.text and block.text != empty %}<div class="project-body">{{ block.text | markdownify }}</div>{% endif %}
 </section>
   {% endif %}
-{% when 'image_text' %}
-<section class="project-block project-block--image-text">
-  {% if block.image and block.image != empty %}<img src="{{ block.image | relative_url }}" alt="{{ block.alt | escape }}">{% else %}<div class="project-image-placeholder" aria-hidden="true"></div>{% endif %}
-  {% if block.title and block.title != empty %}<h2>{{ block.title | escape }}</h2>{% endif %}
-  {% if block.text and block.text != empty %}<div class="project-body">{{ block.text | markdownify }}</div>{% endif %}
-</section>
-{% when 'text' %}
-<section class="project-block project-block--text">
-  {% if block.title and block.title != empty %}<h2>{{ block.title | escape }}</h2>{% endif %}
-  {% if block.text and block.text != empty %}<div class="project-body">{{ block.text | markdownify }}</div>{% endif %}
-</section>
 {% when 'two_images' %}
 <section class="project-block project-block--two-images{% if block.gap == 'none' %} project-block--no-gap{% endif %}">
   {% if block.image_left and block.image_left != empty %}<img src="{{ block.image_left | relative_url }}" alt="{{ block.alt_left | escape }}"{% if block.width_left and block.height_left %} width="{{ block.width_left }}" height="{{ block.height_left }}"{% endif %} loading="lazy" decoding="async">{% else %}<div class="project-image-placeholder" aria-hidden="true"></div>{% endif %}
   {% if block.image_right and block.image_right != empty %}<img src="{{ block.image_right | relative_url }}" alt="{{ block.alt_right | escape }}"{% if block.width_right and block.height_right %} width="{{ block.width_right }}" height="{{ block.height_right }}"{% endif %} loading="lazy" decoding="async">{% else %}<div class="project-image-placeholder" aria-hidden="true"></div>{% endif %}
 </section>
-{% when 'image_left' or 'image_right' %}
+{% when 'text' or 'image_text' or 'image_left' or 'image_right' %}
+  {% assign side_by_side = false %}
+  {% if block.type == 'image_left' or block.type == 'image_right' %}
+    {% assign side_by_side = true %}
+  {% endif %}
 <section class="project-block project-block--{{ block.type | replace: '_', '-' }}">
-  {% if block.image and block.image != empty %}<img src="{{ block.image | relative_url }}" alt="{{ block.alt | escape }}">{% else %}<div class="project-image-placeholder" aria-hidden="true"></div>{% endif %}
-  <div>
-    {% if block.title and block.title != empty %}<h2>{{ block.title | escape }}</h2>{% endif %}
-    {% if block.text and block.text != empty %}<div class="project-body">{{ block.text | markdownify }}</div>{% endif %}
-  </div>
+  {% if block.type != 'text' %}
+    {% if block.image and block.image != empty %}<img src="{{ block.image | relative_url }}" alt="{{ block.alt | escape }}">{% else %}<div class="project-image-placeholder" aria-hidden="true"></div>{% endif %}
+  {% endif %}
+  {% if side_by_side %}<div>{% endif %}
+  {{ block_heading }}
+  {% if block.text and block.text != empty %}<div class="project-body">{{ block.text | markdownify }}</div>{% endif %}
+  {% if side_by_side %}</div>{% endif %}
 </section>
 {% endcase %}

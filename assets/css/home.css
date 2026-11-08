@@ -147,17 +147,13 @@
 
 #publications h1,
 .home-news h2 {
-  margin: 0 0 14px;
+  margin: 0;
   color: var(--color-home-heading);
   font-size: var(--type-meta);
   font-weight: 600;
   line-height: 1.4;
   letter-spacing: .065em;
   text-transform: uppercase;
-}
-
-#publications h1 {
-  margin-bottom: 0;
 }
 
 @media(max-width:700px) {
@@ -186,13 +182,14 @@
 
 .news-feed {
   --scroll-thumb: #e7a4a1;
+  --scroll-track: #f5eceb;
   margin: 0;
   padding: 0 12px 0 0;
   list-style: none;
   max-height: var(--news-height, 5.25rem);
   overflow-y: auto;
   scroll-snap-type: y proximity;
-  scrollbar-color: var(--scroll-thumb) #f5eceb;
+  scrollbar-color: var(--scroll-thumb) var(--scroll-track);
 }
 
 .news-feed li {
@@ -228,10 +225,10 @@
 }
 
 .news-feed::-webkit-scrollbar-thumb {
-  background: #e7a4a1;
+  background: var(--scroll-thumb);
   border-radius: 8px;
 }
 
 .news-feed::-webkit-scrollbar-track {
-  background: #f5eceb;
+  background: var(--scroll-track);
 }

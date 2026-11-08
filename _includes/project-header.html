@@ -3,7 +3,7 @@
 <header class="project-header">
   <h1>{{ page.title | escape }}</h1>
   {% if project_subtitle != empty %}
-    <p class="project-subtitle">{% if page.subtitle_url %}<a href="{{ page.subtitle_url | escape }}" target="_blank" rel="noopener">{{ project_subtitle | strip | escape }} {% include link-arrow.html %}</a>{% else %}{{ project_subtitle | escape }}{% endif %}</p>
+    <p class="project-subtitle">{% if page.subtitle_url %}<a href="{{ page.subtitle_url | escape }}" target="_blank" rel="noopener">{{ project_subtitle | escape }} {% include link-arrow.html %}</a>{% else %}{{ project_subtitle | escape }}{% endif %}</p>
   {% endif %}
   {% if page.credit %}<p class="project-credit">{{ page.credit | escape }}</p>{% endif %}
   {% if project_role != empty %}
