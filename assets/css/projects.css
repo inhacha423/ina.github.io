@@ -63,6 +63,7 @@
 .project-role-value { color: var(--color-text-secondary); }
 .project-credit { margin: .375rem 0 0; color: var(--color-text-secondary); font: 400 var(--type-small)/1.5 var(--font-display); }
 .project-content { display: grid; gap: 2rem; }
+.project-block--video { min-width: 0; }
 .project-video { display: block; width: 100%; aspect-ratio: 16 / 9; min-height: 200px; border: 0; }
 .project-hero-video, .project-hero-pdf { margin-bottom: 2rem; }
 .project-pdf-actions { display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; margin-bottom: .75rem; font: 500 var(--type-small)/1.5 var(--font-display); }
@@ -83,6 +84,7 @@
 .project-block--image-right img, .project-block--image-right .project-image-placeholder { grid-column: 2; grid-row: 1; }
 .project-block--image-right > div { grid-column: 1; grid-row: 1; }
 @media (max-width: 700px) {
+  .project-video--drive { aspect-ratio: 4 / 3; }
   .project-block--two-images, .project-block--image-left, .project-block--image-right { grid-template-columns: 1fr; }
   .project-block--image-right img, .project-block--image-right .project-image-placeholder, .project-block--image-right > div { grid-column: auto; grid-row: auto; }
   .project-block--image-right > div { order: -1; }

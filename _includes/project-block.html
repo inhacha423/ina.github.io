@@ -35,7 +35,7 @@
   {% if embed_url != empty %}
 <section class="project-block project-block--video">
   {{ block_heading }}
-  <iframe class="project-video" src="{{ embed_url | escape }}" title="{{ block.video_title | default: block.title | default: page.title | escape }}" loading="{{ include.loading | default: 'lazy' }}" referrerpolicy="strict-origin-when-cross-origin" allow="encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe>
+  <iframe class="project-video{% if block.provider == 'google_drive' %} project-video--drive{% endif %}" src="{{ embed_url | escape }}" title="{{ block.video_title | default: block.title | default: page.title | escape }}" loading="{{ include.loading | default: 'lazy' }}" referrerpolicy="strict-origin-when-cross-origin" allow="encrypted-media; fullscreen; picture-in-picture" allowfullscreen></iframe>
   {% if block.text and block.text != empty %}<div class="project-body">{{ block.text | markdownify }}</div>{% endif %}
 </section>
   {% endif %}
