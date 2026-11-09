@@ -1,5 +1,6 @@
 exclude:
   - README.md
+  - BIO.md
   - DESIGN_SYSTEM.md
   - PROJECT_ASSETS.md
   - _templates
