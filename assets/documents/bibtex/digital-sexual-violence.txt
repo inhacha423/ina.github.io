@@ -1,0 +1,15 @@
+@article{10.1145/3788066,
+  author = {Cha, Inha and Jang, Yeonju and Kim, Haesoo and Park, Joo Young and Park, Seora and Cheon, EunJeong},
+  title = {{"My body is not your Porn": Identifying Trends of Harm and Oppression through a Sociotechnical Genealogy of Digital Sexual Violence in South Korea}},
+  year = {2026},
+  journal = {Proc. ACM Hum.-Comput. Interact.},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  doi = {10.1145/3788066},
+  url = {https://doi.org/10.1145/3788066},
+  volume = {10},
+  number = {2},
+  month = may,
+  articleno = {CSCW030},
+  numpages = {32}
+}

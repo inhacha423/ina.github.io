@@ -1,0 +1,13 @@
+@inproceedings{10.1145/3613904.3642544,
+  author = {Kwak, Daehyun and Park, Soobin and Cha, Inha and Kim, Hankyung and Lim, Youn-Kyung},
+  title = {{Investigating the Potential of Group Recommendation Systems As a Medium of Social Interactions: A Case of Spotify Blend Experiences between Two Users}},
+  year = {2024},
+  booktitle = {Proceedings of the 2024 CHI Conference on Human Factors in Computing Systems},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  doi = {10.1145/3613904.3642544},
+  url = {https://doi.org/10.1145/3613904.3642544},
+  articleno = {150},
+  numpages = {15},
+  isbn = {9798400703300}
+}

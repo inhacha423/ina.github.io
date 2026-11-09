@@ -1,0 +1,13 @@
+@inproceedings{10.1145/3643834.3660714,
+  author = {Cha, Inha and Pillai, Ajit G. and Wong, Richmond Y.},
+  title = {{Ethics Pathways: A Design Activity for Reflecting on Ethics Engagement in HCI Research}},
+  year = {2024},
+  booktitle = {Proceedings of the 2024 ACM Designing Interactive Systems Conference},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  doi = {10.1145/3643834.3660714},
+  url = {https://doi.org/10.1145/3643834.3660714},
+  pages = {3515--3533},
+  numpages = {19},
+  isbn = {9798400705830}
+}

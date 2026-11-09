@@ -10,3 +10,7 @@ Her broader research examines how the promise of innovation makes AI adoption se
     - how national strategic priorities are constructed and justified through discourses of “AI sovereignty.”
 
     By tracing the social, organizational, and political conditions that shape AI adoption, she identifies opportunities to foster more deliberate and responsible approaches to AI within complex institutional environments.
+
+## Background
+
+Before joining Georgia Tech, she worked as an AI product UX designer at Upstage. She completed her master’s degree in the Department of Industrial Design at KAIST, advised by Dr. Youn-kyung Lim, and earned her undergraduate degree in Aesthetics and Information Science and Culture at Seoul National University.

@@ -1,0 +1,13 @@
+@inproceedings{10.1145/3706598.3713140,
+  author = {Cha, Inha and Wong, Richmond Y.},
+  title = {{Understanding Socio-technical Factors Configuring AI Non-Use in UX Work Practices}},
+  year = {2025},
+  booktitle = {Proceedings of the 2025 CHI Conference on Human Factors in Computing Systems},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  doi = {10.1145/3706598.3713140},
+  url = {https://doi.org/10.1145/3706598.3713140},
+  articleno = {1110},
+  numpages = {17},
+  isbn = {9798400713941}
+}

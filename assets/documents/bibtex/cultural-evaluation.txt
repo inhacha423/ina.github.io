@@ -1,0 +1,14 @@
+@inproceedings{oh-etal-2025-culture,
+  author = {Oh, Juhyun and Cha, Inha and Saxon, Michael and Lim, Hyunseung and Bhatt, Shaily and Oh, Alice},
+  title = {{Culture is Everywhere: A Call for Intentionally Cultural Evaluation}},
+  year = {2025},
+  booktitle = {Findings of the Association for Computational Linguistics: EMNLP 2025},
+  editor = {Christodoulopoulos, Christos and Chakraborty, Tanmoy and Rose, Carolyn and Peng, Violet},
+  publisher = {Association for Computational Linguistics},
+  address = {Suzhou, China},
+  doi = {10.18653/v1/2025.findings-emnlp.1043},
+  url = {https://aclanthology.org/2025.findings-emnlp.1043/},
+  pages = {19156--19168},
+  month = nov,
+  isbn = {979-8-89176-335-7}
+}

@@ -1,0 +1,13 @@
+@inproceedings{10.1145/3411764.3445116,
+  author = {Cha, Inha and Kim, Sung-In and Hong, Hwajung and Yoo, Heejeong and Lim, Youn-kyung},
+  title = {{Exploring the Use of a Voice-based Conversational Agent to Empower Adolescents with Autism Spectrum Disorder}},
+  year = {2021},
+  booktitle = {Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  doi = {10.1145/3411764.3445116},
+  url = {https://doi.org/10.1145/3411764.3445116},
+  articleno = {42},
+  numpages = {15},
+  isbn = {9781450380966}
+}

@@ -1,0 +1,13 @@
+@inproceedings{10.1145/3772318.3790429,
+  author = {Cha, Inha and Wieczorek, Catherine and Wong, Richmond Y.},
+  title = {{The Values of Value in AI Adoption: Rethinking Efficiency in UX Designers' Workplaces}},
+  year = {2026},
+  booktitle = {Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  doi = {10.1145/3772318.3790429},
+  url = {https://doi.org/10.1145/3772318.3790429},
+  articleno = {697},
+  numpages = {17},
+  isbn = {9798400722783}
+}

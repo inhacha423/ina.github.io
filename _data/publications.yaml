@@ -21,6 +21,8 @@ papers:
   links:
   - url: https://dl.acm.org/doi/10.1145/3805689.3812407
     label: pdf
+  - url: /assets/documents/bibtex/organizational-infrastructures.txt
+    label: bibtex
   year: '2026'
 - title: 'The Values of Value in AI Adoption: Rethinking Efficiency in UX Designers''
     Workplaces'
@@ -33,6 +35,8 @@ papers:
   links:
   - url: https://dl.acm.org/doi/10.1145/3772318.3790429
     label: pdf
+  - url: /assets/documents/bibtex/values-of-value.txt
+    label: bibtex
   year: '2026'
 - title: 'Beyond Claiming Sovereign AI: Motivations, Challenges, and Contradictions
     in Developing and Deploying Local Foundation Models in South Korea'
@@ -44,6 +48,8 @@ papers:
   links:
   - url: https://dl.acm.org/doi/10.1145/3772318.3790666
     label: pdf
+  - url: /assets/documents/bibtex/sovereign-ai.txt
+    label: bibtex
   year: '2026'
 - title: "“My Body is Not Your Porn”: Identifying Trends of Harm and Oppression through
     a Sociotechnical Genealogy of Digital Sexual Violence in South Korea"
@@ -57,6 +63,8 @@ papers:
   links:
   - url: https://dl.acm.org/doi/full/10.1145/3788066
     label: pdf
+  - url: /assets/documents/bibtex/digital-sexual-violence.txt
+    label: bibtex
   year: '2026'
 - title: 'Culture is Everywhere: A Call for Intentionally Cultural Evaluation'
   authors: Juhyun Oh, <b><span class="thisauthor">Inha Cha</span></b>, Michael Saxon,
@@ -68,6 +76,8 @@ papers:
   links:
   - url: https://aclanthology.org/2025.findings-emnlp.1043/
     label: pdf
+  - url: /assets/documents/bibtex/cultural-evaluation.txt
+    label: bibtex
   year: '2025'
 - title: Discovering Factor Level Preferences to Improve Human-Model Alignment
   authors: Juhyun Oh, Eunsu Kim, Jiseon Kim, Wenda Xu, <b><span class="thisauthor">Inha
@@ -79,6 +89,8 @@ papers:
   links:
   - url: https://aclanthology.org/2025.findings-emnlp.1045/
     label: pdf
+  - url: /assets/documents/bibtex/factor-level-preference.txt
+    label: bibtex
   year: '2025'
 - title: Understanding Socio-technical Factors Configuring AI Non-Use in UX Work Practices
   authors: <b><span class="thisauthor">Inha Cha</span></b> and Richmond Wong
@@ -87,6 +99,8 @@ papers:
   links:
   - url: https://doi.org/10.1145/3706598.3713140
     label: pdf
+  - url: /assets/documents/bibtex/ai-non-use.txt
+    label: bibtex
   year: '2025'
 - title: 'Ethics Pathways: A Design Activity for Reflecting on Ethical Engagement
     in HCI Research'
@@ -99,6 +113,8 @@ papers:
   links:
   - url: https://dl.acm.org/doi/10.1145/3643834.3660714
     label: pdf
+  - url: /assets/documents/bibtex/ethics-pathways.txt
+    label: bibtex
   - url: https://drive.google.com/file/d/1lXCQFDEBIgkR3piV8BvGiyAOH7TtlcZM/view?usp=sharing
     label: resource
   year: '2024'
@@ -113,8 +129,10 @@ papers:
   venue_short: CHI 2024
   venue_url: https://dl.acm.org/doi/proceedings/10.1145/3613904
   links:
-  - url: https://dl.acm.org/doi/10.1145/3613904.3642544f
+  - url: https://dl.acm.org/doi/10.1145/3613904.3642544
     label: pdf
+  - url: /assets/documents/bibtex/spotify-blend.txt
+    label: bibtex
   year: '2024'
 - title: Unlocking the Tacit Knowledge of Data Work in Machine Learning
   authors: <b><span class="thisauthor">Inha Cha</span></b>*, Juhyun Oh*, Cheul Young
@@ -127,6 +145,8 @@ papers:
   links:
   - url: https://dl.acm.org/doi/10.1145/3544549.3585616
     label: pdf
+  - url: /assets/documents/bibtex/tacit-knowledge.txt
+    label: bibtex
   year: '2023'
 - title: Exploring the Use of a Voice-based Conversational Agent to Empower Adolescents
     with Autism Spectrum Disorder
@@ -140,6 +160,8 @@ papers:
   links:
   - url: https://dl.acm.org/doi/10.1145/3411764.3445116
     label: pdf
+  - url: /assets/documents/bibtex/voice-agent.txt
+    label: bibtex
   year: '2021'
 - title: 'Toward Becoming a Better Self: Understanding Self-Tracking Experiences of
     Adolescents with Autism Spectrum Disorder Using Custom Trackers'
@@ -153,6 +175,8 @@ papers:
   links:
   - url: https://dl.acm.org/doi/10.1145/3329189.3329209
     label: pdf
+  - url: /assets/documents/bibtex/self-tracking.txt
+    label: bibtex
   year: '2019'
 - title: A Study for Specializing a Chatbot-based Self-Management Program for Adolescents
     with Autism Spectrum Disorder
@@ -164,4 +188,6 @@ papers:
   links:
   - url: https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE08008121
     label: pdf
+  - url: /assets/documents/bibtex/chatbot-self-management.txt
+    label: bibtex
   year: '2019'

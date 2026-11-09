@@ -1,0 +1,13 @@
+@inproceedings{10.1145/3772318.3790666,
+  author = {Cha, Inha and Wong, Richmond Y.},
+  title = {{Beyond Claiming Sovereign AI: Motivations, Challenges, and Contradictions in Developing and Deploying Local Foundation Models in South Korea}},
+  year = {2026},
+  booktitle = {Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  doi = {10.1145/3772318.3790666},
+  url = {https://doi.org/10.1145/3772318.3790666},
+  articleno = {539},
+  numpages = {16},
+  isbn = {9798400722783}
+}

@@ -1,0 +1,12 @@
+@inbook{10.1145/3805689.3812407,
+  author = {Pillai, Ajit G. and Cha, Inha and Wong, Richmond Y.},
+  title = {{Navigating Organizational Infrastructures: Addressing Ethics Uncertainty Experienced by Middle Managers in AI Development}},
+  year = {2026},
+  booktitle = {Proceedings of the 2026 ACM Conference on Fairness, Accountability, and Transparency},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  doi = {10.1145/3805689.3812407},
+  url = {https://doi.org/10.1145/3805689.3812407},
+  pages = {570--590},
+  isbn = {9798400725968}
+}

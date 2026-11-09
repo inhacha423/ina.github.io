@@ -5,9 +5,7 @@ nav_item: home
 <section class="intro" aria-label="Introduction">
   <img class="portrait" src="{{ site.data.files.portrait | relative_url }}" alt="Inha Cha">
   <div class="bio">
-    <p>Inha Cha is a PhD student at Georgia Tech working with <a href="https://richmondywong.com/">Dr. Richmond Y. Wong</a> and <a href="https://carldisalvo.com/">Dr. Carl DiSalvo</a>. Her research sits at the intersection of human-computer interaction (HCI), science and technology studies (STS), and technology policy. She studies how AI is reshaping designers’ everyday work and how designers negotiate those changes.</p>
-    <p>Her broader research examines how the promise of innovation makes AI adoption seem inevitable, obscuring its costs, trade-offs, and uncertainties. She looks at how organizations and governments make AI a priority and how that shapes decisions about whether, when, and how to use it. Through her research, she asks how a handful of tech companies came to hold so much influence over the future of work and what workers can do together to build alternatives.</p>
-    <p>Before joining Georgia Tech, she worked as an AI product UX designer at Upstage. She completed her master’s degree in the Department of Industrial Design at KAIST, advised by Dr. Youn-kyung Lim, and earned her undergraduate degree in Aesthetics and Information Science and Culture at Seoul National University.</p>
+    <p>Inha Cha is a PhD student at Georgia Tech working with <a href="https://richmondywong.com/">Dr. Richmond Y. Wong</a> and <a href="https://carldisalvo.com/">Dr. Carl DiSalvo</a>. Her research brings together human-computer interaction (HCI), science and technology studies (STS), and technology policy. She studies how AI is reshaping designers’ everyday work and how they negotiate those changes. More broadly, she asks why AI adoption comes to seem inevitable, who gets to shape decisions about its use, and what workers can do together to build alternatives.</p>
 
     <div class="bio-links" aria-label="Contact and profiles">
       <a href="mailto:{{ site.data.contact.email | escape }}">Email {% include link-arrow.html %}</a>
@@ -58,7 +56,11 @@ nav_item: home
       {% unless paper.links == empty %}
         <div class="paper-actions">
           {% if pdf_link %}<a href="{{ pdf_link.url | escape }}" target="_blank" rel="noopener">PDF</a>{% endif %}
-          {% if bibtex_link %}<a href="{{ bibtex_link.url | escape }}" target="_blank" rel="noopener">BibTeX</a>{% elsif pdf_link %}<span class="paper-action--pending" aria-disabled="true" title="BibTeX coming soon">BibTeX</span>{% endif %}
+          {% if bibtex_link %}
+            {% assign bibtex_url = bibtex_link.url %}
+            {% assign bibtex_prefix = bibtex_url | slice: 0, 1 %}
+            {% if bibtex_prefix == '/' %}{% assign bibtex_url = bibtex_url | relative_url %}{% endif %}
+            <a href="{{ bibtex_url | escape }}" target="_blank" rel="noopener">BibTeX</a>{% elsif pdf_link %}<span class="paper-action--pending" aria-disabled="true" title="BibTeX coming soon">BibTeX</span>{% endif %}
           {% for link in paper.links %}
             {% if link.label != 'pdf' and link.label != 'bibtex' %}<a href="{{ link.url | escape }}" target="_blank" rel="noopener">{% if link.label == 'resource' %}Resource{% else %}{{ link.label | escape }}{% endif %}</a>{% endif %}
           {% endfor %}

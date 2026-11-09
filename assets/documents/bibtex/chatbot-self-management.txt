@@ -1,0 +1,8 @@
+@article{김성인2019자폐스펙트럼장애를,
+  author = {김성인 and 류명한 and 조은경 and 차인하 and 김영호 and 유희정 and 홍화정},
+  title = {{자폐스펙트럼장애를 가진 청소년을 위한 챗봇 기반의 자기 관리 프로그램 개발 연구}},
+  year = {2019},
+  journal = {한국 HCI 학회 학술대회},
+  url = {https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE08008121},
+  pages = {280--285}
+}

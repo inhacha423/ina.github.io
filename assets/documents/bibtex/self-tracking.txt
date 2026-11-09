@@ -1,0 +1,13 @@
+@inproceedings{10.1145/3329189.3329209,
+  author = {Kim, Sung-In and Jo, Eunkyung and Ryu, Myeonghan and Cha, Inha and Kim, Young-Ho and Yoo, Heejung and Hong, Hwajung},
+  title = {{Toward Becoming a Better Self: Understanding Self-Tracking Experiences of Adolescents with Autism Spectrum Disorder Using Custom Trackers}},
+  year = {2019},
+  booktitle = {Proceedings of the 13th EAI International Conference on Pervasive Computing Technologies for Healthcare},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  doi = {10.1145/3329189.3329209},
+  url = {https://doi.org/10.1145/3329189.3329209},
+  pages = {169--178},
+  numpages = {10},
+  isbn = {9781450361262}
+}

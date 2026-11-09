@@ -1,0 +1,14 @@
+@inproceedings{oh-etal-2025-uncovering,
+  author = {Oh, Juhyun and Kim, Eunsu and Kim, Jiseon and Xu, Wenda and Cha, Inha and Wang, William Yang and Oh, Alice},
+  title = {{Uncovering Factor-Level Preference to Improve Human-Model Alignment}},
+  year = {2025},
+  booktitle = {Findings of the Association for Computational Linguistics: EMNLP 2025},
+  editor = {Christodoulopoulos, Christos and Chakraborty, Tanmoy and Rose, Carolyn and Peng, Violet},
+  publisher = {Association for Computational Linguistics},
+  address = {Suzhou, China},
+  doi = {10.18653/v1/2025.findings-emnlp.1045},
+  url = {https://aclanthology.org/2025.findings-emnlp.1045/},
+  pages = {19179--19203},
+  month = nov,
+  isbn = {979-8-89176-335-7}
+}
