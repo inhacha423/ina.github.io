@@ -50,5 +50,6 @@
 .cv-service-heading small { color: var(--color-text-muted); font-size: var(--type-meta); font-style: italic; }
 .cv-services .cv-entry { margin-bottom: .35rem; }
 @media (max-width: 600px) {
-  .cv-page { --cv-date-column: 6.5rem; --cv-column-gap: 1rem; }
+  .cv-page { --cv-date-column: 4.5rem; --cv-column-gap: .625rem; }
+  .cv-date { font-size: var(--type-caption); line-height: 1.5; overflow-wrap: anywhere; }
 }
