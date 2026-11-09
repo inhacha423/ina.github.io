@@ -185,9 +185,10 @@ Image blocks accept an optional `caption`, using the same centered, muted `.proj
 
 ## Credits
 
-The HTML CV layout adapts the dated-entry structure from [Donghoon Shin’s CV theme](https://github.com/donghoon-io/donghoon-io.github.io).
+- **Website foundation.** Originally forked from [Jungsoo Park’s website](https://github.com/JJumSSu/JJumSSu.github.io), which was based on Martin Saveski’s template.
+- **CV and news.** The CV layout adapts the dated-entry structure from [Donghoon Shin’s theme](https://github.com/donghoon-io/donghoon-io.github.io). The home news layout also draws inspiration from that theme.
 
-Forked from [Jungsoo Park’s website](https://github.com/JJumSSu/JJumSSu.github.io), based on Martin Saveski’s template. The news layout was inspired by [Donghoon Shin’s website theme](https://github.com/donghoon-io/donghoon-io.github.io).
+Check the original authors’ license terms or obtain permission before redistributing their code in a template.
 
 ### Responsive project photographs
 
