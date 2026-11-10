@@ -7,6 +7,17 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&amp;family=Inter:wght@300;400;500;600&amp;display=swap">
   {% assign asset_version = site.time | date: '%s' %}
   <title>{{ page.title | default: "Research portfolio" }}</title>
+  {% if page.url == "/" %}
+    {% assign share_image = site.data.files.portrait | absolute_url %}
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ page.title | escape }}">
+    <meta property="og:url" content="{{ page.url | absolute_url | escape }}">
+    <meta property="og:image" content="{{ share_image | escape }}">
+    <meta property="og:image:alt" content="Portrait of Inha Cha">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="{{ share_image | escape }}">
+    <meta name="twitter:image:alt" content="Portrait of Inha Cha">
+  {% endif %}
   <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}?v={{ asset_version }}">
   {% for stylesheet in page.stylesheets %}
     {% assign stylesheet_url = '/assets/css/' | append: stylesheet | append: '.css' %}
